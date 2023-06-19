@@ -9,10 +9,7 @@
 /* Begin PBXBuildFile section */
 		E3581D6C2A2D66AA0081446D /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3581D6B2A2D66AA0081446D /* ViewRouter.swift */; };
 		E3C3A6CD2A2968B600525C32 /* AddAlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3A6CC2A2968B600525C32 /* AddAlarmView.swift */; };
-		E3C3A6CF2A297F1200525C32 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3A6CE2A297F1200525C32 /* TestView.swift */; };
 		E3C3A6D12A29C5C900525C32 /* AlarmItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3A6D02A29C5C900525C32 /* AlarmItemView.swift */; };
-		E3C3A6D32A29D9F500525C32 /* MainSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3A6D22A29D9F500525C32 /* MainSheetView.swift */; };
-		E3C3A6D52A29DA2900525C32 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3A6D42A29DA2900525C32 /* SettingView.swift */; };
 		E3E5E4BA2A281997001DAE5E /* week3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E5E4B92A281997001DAE5E /* week3App.swift */; };
 		E3E5E4BC2A281997001DAE5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E5E4BB2A281997001DAE5E /* ContentView.swift */; };
 		E3E5E4BE2A281998001DAE5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3E5E4BD2A281998001DAE5E /* Assets.xcassets */; };
@@ -43,10 +40,7 @@
 /* Begin PBXFileReference section */
 		E3581D6B2A2D66AA0081446D /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		E3C3A6CC2A2968B600525C32 /* AddAlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmView.swift; sourceTree = "<group>"; };
-		E3C3A6CE2A297F1200525C32 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		E3C3A6D02A29C5C900525C32 /* AlarmItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmItemView.swift; sourceTree = "<group>"; };
-		E3C3A6D22A29D9F500525C32 /* MainSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSheetView.swift; sourceTree = "<group>"; };
-		E3C3A6D42A29DA2900525C32 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		E3E5E4B62A281997001DAE5E /* week3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = week3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3E5E4B92A281997001DAE5E /* week3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = week3App.swift; sourceTree = "<group>"; };
 		E3E5E4BB2A281997001DAE5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,8 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				E3C3A6CC2A2968B600525C32 /* AddAlarmView.swift */,
-				E3C3A6D22A29D9F500525C32 /* MainSheetView.swift */,
-				E3C3A6D42A29DA2900525C32 /* SettingView.swift */,
 			);
 			path = Sheet;
 			sourceTree = "<group>";
@@ -123,7 +115,6 @@
 				E3E5E4B92A281997001DAE5E /* week3App.swift */,
 				E3581D6B2A2D66AA0081446D /* ViewRouter.swift */,
 				E3E5E4BB2A281997001DAE5E /* ContentView.swift */,
-				E3C3A6CE2A297F1200525C32 /* TestView.swift */,
 				E3C3A6D02A29C5C900525C32 /* AlarmItemView.swift */,
 				E3E5E4BD2A281998001DAE5E /* Assets.xcassets */,
 				E3E5E4BF2A281998001DAE5E /* Preview Content */,
@@ -287,11 +278,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3C3A6CF2A297F1200525C32 /* TestView.swift in Sources */,
-				E3C3A6D52A29DA2900525C32 /* SettingView.swift in Sources */,
 				E3E5E4BC2A281997001DAE5E /* ContentView.swift in Sources */,
 				E3C3A6D12A29C5C900525C32 /* AlarmItemView.swift in Sources */,
-				E3C3A6D32A29D9F500525C32 /* MainSheetView.swift in Sources */,
 				E3C3A6CD2A2968B600525C32 /* AddAlarmView.swift in Sources */,
 				E3E5E4BA2A281997001DAE5E /* week3App.swift in Sources */,
 				E3581D6C2A2D66AA0081446D /* ViewRouter.swift in Sources */,
