@@ -31,6 +31,7 @@ struct ContentView: View {
         UITableView.appearance().backgroundColor = UIColor(Color("ColorBgBlack"))
     }
     
+    
     var body: some View {
         NavigationView {
             List {
