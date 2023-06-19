@@ -5,14 +5,23 @@
 ## 히스토리
 
 ### 1주차: 출쓱
+https://apps.apple.com/kr/app/%EC%B6%9C%EC%93%B1/id6445873342
+
 |Page 01|Page 02|
 |---|---|
 |<img src="./history/week01_01.png">|<img src="./history/week01_02.png">|
-https://apps.apple.com/kr/app/%EC%B6%9C%EC%93%B1/id6445873342
 
 ### 2주차: 애플 스토어
 
+|Page 01|Page 02|
+|---|---|
+|<img src="./history/week02_01.png">|<img src="./history/week02_02.png">|
+
 ### 3주차: 알람
+
+|Page 01|Page 02|Page 03|Page 04|
+|---|---|---|---|
+|<img src="./history/week03_01.png">|<img src="./history/week03_02.png">|<img src="./history/week03_03.png">|<img src="./history/week03_04.png">|
 
 ## 멋진 팀원들
 
