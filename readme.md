@@ -8,7 +8,7 @@
 
 |Page 01|Page 02|
 |---|---|
-|<img src="./history/week01_01.png">|<img src="./history/week01_02.png">|
+|<img src="./history/week01_01.png" width="115px">|<img src="./history/week01_02.png" width="115px">|
 
 <br>
 <br>
@@ -17,7 +17,7 @@
 
 |Page 01|Page 02|
 |---|---|
-|<img src="./history/week02_01.png">|<img src="./history/week02_02.png">|
+|<img src="./history/week02_01.png" width="115px">|<img src="./history/week02_02.png" width="115px">|
 
 <br>
 <br>
