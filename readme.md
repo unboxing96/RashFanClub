@@ -1,12 +1,43 @@
 # Rash팬클럽: iOS 클론코딩 & 코드리뷰 & 리팩토링
 
 ## 진행 방식
+<hr>
 
-### 준비
+### 구성
+- #### 1주차: 클론 코딩
+- #### 2주차: 코드 리뷰 & 리팩토링
+
+<br>
+
+### 세부 진행
+
+- #### 1주차 모임 전까지
+    1. 성심성의껏 과제
+    2. 모르면 팀원들에게 거침없이 물어보고, 열과 성을 다해 도와주기
+
+- #### 1주차 모임
+    1. 6명 모두 작업해온 것 설명하기 (핵심 기능 중심으로)
+    2. 야무지게 피드백 해주기
+    3. 2명씩 랜덤하게 짝꿍 편성
+    4. 짝꿍 == 서로의 code review를 성심성의껏 도와주는 존재
+
+- #### 2주차 모임 전까지
+    1. [필수] 2주차 스터디 모임 전까지, 각자 작업한 파일 PR
+    2. [필수] 1번을 기준으로 짝꿍끼리 code review 후 merge 승인
+    3. [필수] 1번을 기준으로 + 2번이 완료되면 참고하여 Refactoring 진행
+    4. [필수] Refactoring 마치고 다시 PR
+    5. [선택] 4번을 기준으로 짝꿍끼리 code review
+
+- #### 2주차 모임
+    1. 랜덤하게 2명 뽑아서 Refactoring 발표
+    2. 새로운 과제 부여
 
 
+<br>
+<br>
 
 ## 히스토리
+<hr>
 
 ### 1주차: [출쓱](https://apps.apple.com/kr/app/%EC%B6%9C%EC%93%B1/id6445873342)
 
@@ -35,7 +66,10 @@
 <br>
 <br>
 
+
+
 ## 멋진 팀원들
+<hr>
 
 |[MK](https://github.com/MK827)|[Royce](https://github.com/Jin-s-work)|[Malty](https://github.com/youihyonKim)|[Chad](https://github.com/chad0909)|[PEPE](https://github.com/unboxing96)|[Rash](https://github.com/kdb1217)|
 |---|---|---|---|---|---|
