@@ -16,6 +16,10 @@ struct AddAlarmView: View {
     
     @State private var isAlarmOn: Bool = false
     
+    var sortedAlarms: [Alarm] {
+        alarmData.alarms.sorted(by: { $0.date < $1.date })
+    }
+    
     init(alarm: Alarm? = nil, isPresented: Binding<Bool>) {  // Modify the initializer
         _alarm = StateObject(wrappedValue: alarm ?? Alarm(date: Date(), isActive: true))
         _isPresented = isPresented
@@ -38,27 +42,28 @@ struct AddAlarmView: View {
                 }, label: {
                     Text("취소")
                 }), trailing:
-                                        Button(action: {
-                    if let index = alarmData.alarms.firstIndex(where: { $0.id == alarm.id }) {
-                        if !alarm.isActive {
-                            if isTimeChanged {
+                    Button(action: {
+                        if let index = alarmData.alarms.firstIndex(where: { $0.id == alarm.id }) {
+                            if !alarm.isActive {
+                                if isTimeChanged {
+                                    alarm.isActive = true
+                                }
+                            } else {
                                 alarm.isActive = true
                             }
+                            alarmData.alarms[index] = alarm
                         } else {
                             alarm.isActive = true
+                            alarmData.alarms.append(alarm)
                         }
-                        alarmData.alarms[index] = alarm
-                    } else {
-                        alarm.isActive = true
-                        alarmData.alarms.append(alarm)
-                    }
-                    isPresented = false  // Close the AddAlarmView
-                }) {
-                    Text("저장")
-                })
+                        isPresented = false  // Close the AddAlarmView
+                    }) {
+                        Text("저장")
+                    })
             }
         }
         
+        // 아래 부분
         List {
             NavigationLink(destination: EmptyView()) {
                 VStack {

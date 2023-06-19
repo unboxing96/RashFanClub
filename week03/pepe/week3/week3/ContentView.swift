@@ -16,8 +16,8 @@ struct ContentView: View {
     
     let coloredNavAppearance = UINavigationBarAppearance()
     
-    var sortedAlarms: [Alarm] {
-        alarmData.alarms.sorted(by: { $0.date < $1.date })
+    var sortedAlarmIndices: [Int] {
+        alarmData.alarms.indices.sorted(by: { alarmData.alarms[$0].date < alarmData.alarms[$1].date })
     }
     
     init() {
@@ -62,16 +62,15 @@ struct ContentView: View {
                 .listRowSeparatorTint(.white)
                 
                 // alarmArray에 원소가 있을 때만 기타 section이 보이게
-                if sortedAlarms.count != 0 {
+                if !alarmData.alarms.isEmpty {
                     Section(header: Text("기타").font(.system(size: 17))) {
-                        ForEach(sortedAlarms.indices, id: \.self) { index in
-                                
+                        ForEach(sortedAlarmIndices, id: \.self) { index in
                             Button {
                                 selectedAlarm = alarmData.alarms[index]
                                 isAddAlarmViewPresented = true
                             } label: {
                                 HStack {
-                                    Text("\(DateFormatter.timeOnly.string(from: sortedAlarms[index].date))")
+                                    Text("\(DateFormatter.timeOnly.string(from: alarmData.alarms[index].date))")
                                     Spacer()
                                     Toggle("", isOn: $alarmData.alarms[index].isActive)
                                 }
