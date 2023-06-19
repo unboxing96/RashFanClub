@@ -60,7 +60,27 @@ struct ContentView: View {
                 .foregroundColor(Color("ColorFontWhite"))
                 .listRowBackground(Color.clear)
                 .listRowSeparatorTint(.white)
-
+                
+                // alarmArray에 원소가 있을 때만 기타 section이 보이게
+                if !alarmData.alarms.isEmpty {
+                    Section(header: Text("기타").font(.system(size: 17))) {
+                        ForEach(sortedAlarmIndices, id: \.self) { index in
+                            Button {
+                                selectedAlarm = alarmData.alarms[index]
+                                isAddAlarmViewPresented = true
+                            } label: {
+                                HStack {
+                                    Text("\(DateFormatter.timeOnly.string(from: alarmData.alarms[index].date))")
+                                    Spacer()
+                                    Toggle("", isOn: $alarmData.alarms[index].isActive)
+                                }
+                            }
+                        }
+                    }
+                    .foregroundColor(Color("ColorFontWhite"))
+                    .listRowBackground(Color.clear)
+                    .listRowSeparatorTint(.white)
+                }
             }
             .listStyle(.plain)
             .navigationBarTitle("알람")
