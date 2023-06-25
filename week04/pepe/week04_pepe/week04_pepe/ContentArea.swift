@@ -79,6 +79,7 @@ struct ContentArea: View {
                     .foregroundColor(Color("ColorFontWhite"))
             }
         }
+        .background(Color("ColorBgBlack"))
     }
 }
 

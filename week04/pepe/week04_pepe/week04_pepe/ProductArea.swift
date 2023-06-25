@@ -11,10 +11,9 @@ struct ProductArea: View {
 
     var body: some View {
         VStack {
-            
             Rectangle()
                 .frame(height: 173)
-                .foregroundColor(.gray)
+                .foregroundColor(.white)
                 .overlay {
                     VStack {
                         Text("iPhone 14 Pro 더 깊이 살펴보기")
@@ -55,6 +54,7 @@ struct ProductArea: View {
             Text("1. iPhone 14 Pro 및 iPhone 14 Pro Max는 IEC 규격 60529하의 IP68 (이 문구를 발견하고 톡방에 올리면, 엠선생님의 NearMe 무료 음료수 이용권 증정)")
 
         }
+        .background(Color("ColorBgGray"))
     }
 }
 

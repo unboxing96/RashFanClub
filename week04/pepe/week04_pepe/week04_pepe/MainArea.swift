@@ -10,6 +10,7 @@ import SwiftUI
 struct MainArea: View {
     
     @State var itemOtherColor = itemOtherColors()
+    @State var selectedButtonIndex: Int = 0
 
     var body: some View {
         ZStack {
@@ -32,9 +33,17 @@ struct MainArea: View {
                                     itemOtherColor.imgName = itemOtherColorArr[index][0]
                                     itemOtherColor.colorName = itemOtherColorArr[index][1]
                                     itemOtherColor.imgProductName = itemOtherColorArr[index][3]
+                                    selectedButtonIndex = index  // Update the selected button index when the button is tapped
                                 } label: {
-                                    Image(systemName: "circle.fill")
-                                        .foregroundColor(Color(itemOtherColorArr[index][2]))
+                                    ZStack {
+                                        Image(systemName: "circle.fill")
+                                            .foregroundColor(Color(itemOtherColorArr[index][2]))
+                                            .overlay(
+                                                Circle()
+                                                    .strokeBorder(selectedButtonIndex == index ? Color.blue : Color.clear, lineWidth: 2)
+                                                    .frame(width: 25, height: 25)
+                                            )
+                                    }
                                 }
                             }
                         }
