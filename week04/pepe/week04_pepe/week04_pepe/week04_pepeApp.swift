@@ -11,7 +11,7 @@ import SwiftUI
 struct week04_pepeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DetectScrollPosition()
         }
     }
 }

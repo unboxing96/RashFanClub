@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E32D6EAB2A44274E00A48F5A /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = E32D6EAA2A44274E00A48F5A /* readme.md */; };
+		E32D6EAD2A44289F00A48F5A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D6EAC2A44289F00A48F5A /* MainView.swift */; };
+		E32D6EAF2A442BBD00A48F5A /* MainArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D6EAE2A442BBD00A48F5A /* MainArea.swift */; };
+		E32D6EB12A442BC400A48F5A /* ContentArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D6EB02A442BC400A48F5A /* ContentArea.swift */; };
+		E32D6EB32A442BC900A48F5A /* ProductArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D6EB22A442BC900A48F5A /* ProductArea.swift */; };
+		E32D6EB52A442BD400A48F5A /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D6EB42A442BD400A48F5A /* ToastView.swift */; };
+		E32D6EB72A447F3B00A48F5A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D6EB62A447F3B00A48F5A /* Model.swift */; };
 		E362AC3C2A4415B400038B33 /* week04_pepeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E362AC3B2A4415B400038B33 /* week04_pepeApp.swift */; };
-		E362AC3E2A4415B400038B33 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E362AC3D2A4415B400038B33 /* ContentView.swift */; };
 		E362AC402A4415B400038B33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E362AC3F2A4415B400038B33 /* Assets.xcassets */; };
 		E362AC432A4415B400038B33 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E362AC422A4415B400038B33 /* Preview Assets.xcassets */; };
 		E362AC4D2A4415B400038B33 /* week04_pepeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E362AC4C2A4415B400038B33 /* week04_pepeTests.swift */; };
 		E362AC572A4415B400038B33 /* week04_pepeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E362AC562A4415B400038B33 /* week04_pepeUITests.swift */; };
 		E362AC592A4415B400038B33 /* week04_pepeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E362AC582A4415B400038B33 /* week04_pepeUITestsLaunchTests.swift */; };
+		E39721D52A456E2A0028FF3C /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39721D42A456E2A0028FF3C /* TestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E32D6EAA2A44274E00A48F5A /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		E32D6EAC2A44289F00A48F5A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		E32D6EAE2A442BBD00A48F5A /* MainArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainArea.swift; sourceTree = "<group>"; };
+		E32D6EB02A442BC400A48F5A /* ContentArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentArea.swift; sourceTree = "<group>"; };
+		E32D6EB22A442BC900A48F5A /* ProductArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductArea.swift; sourceTree = "<group>"; };
+		E32D6EB42A442BD400A48F5A /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		E32D6EB62A447F3B00A48F5A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		E362AC382A4415B400038B33 /* week04_pepe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = week04_pepe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E362AC3B2A4415B400038B33 /* week04_pepeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = week04_pepeApp.swift; sourceTree = "<group>"; };
-		E362AC3D2A4415B400038B33 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E362AC3F2A4415B400038B33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E362AC422A4415B400038B33 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E362AC482A4415B400038B33 /* week04_pepeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = week04_pepeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +57,7 @@
 		E362AC522A4415B400038B33 /* week04_pepeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = week04_pepeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E362AC562A4415B400038B33 /* week04_pepeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = week04_pepeUITests.swift; sourceTree = "<group>"; };
 		E362AC582A4415B400038B33 /* week04_pepeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = week04_pepeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E39721D42A456E2A0028FF3C /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +88,7 @@
 		E362AC2F2A4415B400038B33 = {
 			isa = PBXGroup;
 			children = (
+				E32D6EAA2A44274E00A48F5A /* readme.md */,
 				E362AC3A2A4415B400038B33 /* week04_pepe */,
 				E362AC4B2A4415B400038B33 /* week04_pepeTests */,
 				E362AC552A4415B400038B33 /* week04_pepeUITests */,
@@ -95,7 +110,13 @@
 			isa = PBXGroup;
 			children = (
 				E362AC3B2A4415B400038B33 /* week04_pepeApp.swift */,
-				E362AC3D2A4415B400038B33 /* ContentView.swift */,
+				E32D6EAC2A44289F00A48F5A /* MainView.swift */,
+				E39721D42A456E2A0028FF3C /* TestView.swift */,
+				E32D6EAE2A442BBD00A48F5A /* MainArea.swift */,
+				E32D6EB62A447F3B00A48F5A /* Model.swift */,
+				E32D6EB02A442BC400A48F5A /* ContentArea.swift */,
+				E32D6EB22A442BC900A48F5A /* ProductArea.swift */,
+				E32D6EB42A442BD400A48F5A /* ToastView.swift */,
 				E362AC3F2A4415B400038B33 /* Assets.xcassets */,
 				E362AC412A4415B400038B33 /* Preview Content */,
 			);
@@ -232,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E362AC432A4415B400038B33 /* Preview Assets.xcassets in Resources */,
+				E32D6EAB2A44274E00A48F5A /* readme.md in Resources */,
 				E362AC402A4415B400038B33 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,8 +279,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E362AC3E2A4415B400038B33 /* ContentView.swift in Sources */,
+				E32D6EB72A447F3B00A48F5A /* Model.swift in Sources */,
+				E32D6EB32A442BC900A48F5A /* ProductArea.swift in Sources */,
+				E32D6EB12A442BC400A48F5A /* ContentArea.swift in Sources */,
+				E32D6EAD2A44289F00A48F5A /* MainView.swift in Sources */,
+				E39721D52A456E2A0028FF3C /* TestView.swift in Sources */,
 				E362AC3C2A4415B400038B33 /* week04_pepeApp.swift in Sources */,
+				E32D6EB52A442BD400A48F5A /* ToastView.swift in Sources */,
+				E32D6EAF2A442BBD00A48F5A /* MainArea.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
