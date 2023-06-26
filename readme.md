@@ -67,10 +67,10 @@
 - "Refactor : week04 MainView 리팩토링 완료 - MK"
 
 ### PR
-예시 참고: [https://github.com/oliver-or-not/iPodSwiftUI/pull/5](https://github.com/oliver-or-not/iPodSwiftUI/pull/5)
+예시 참고: [올리버의 깃허브](https://github.com/oliver-or-not/iPodSwiftUI/pull/5)
 
 ### Comment
-예시 참고: [https://github.com/unboxing96/RashFanClub/pull/15](https://github.com/unboxing96/RashFanClub/pull/15)
+예시 참고: [chatGPT로 자동 생성된 Comment. 파일마다 여기 아래에 추가 코멘트 작성하면 됨](https://github.com/unboxing96/RashFanClub/pull/15)
 
 
 
