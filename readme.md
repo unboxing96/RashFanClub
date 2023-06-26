@@ -72,7 +72,8 @@
 ### Comment
 예시 참고: [chatGPT로 자동 생성된 Comment. 파일마다 여기 아래에 추가 코멘트 작성하면 됨](https://github.com/unboxing96/RashFanClub/pull/15)
 
-
+#### Git/GitHub이 헷갈리면?
+예시 참고: [페페 블로그](https://soobamba.tistory.com/entry/github-branch-%EB%A7%8C%EB%93%A4%EC%96%B4%EC%84%9C-%EC%8B%A4%EC%A0%84-%ED%98%91%EC%97%85%ED%95%98%EA%B8%B0)
 
 <br>
 <br>
