@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentArea: View {
     var body: some View {
-        ScrollView {
+        VStack (spacing: 0){
             Image("ImgContentL01")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -79,7 +79,7 @@ struct ContentArea: View {
                     .foregroundColor(Color("ColorFontWhite"))
             }
         }
-        .background(Color("ColorBgBlack"))
+        .background(Color("ColorBgGray"))
     }
 }
 
