@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     @State private var scrollPosition: CGPoint = .zero
+    @State private var showToast : Bool = false
     
     var body: some View {
         ZStack (alignment: .bottom) {
@@ -16,7 +17,7 @@ struct MainView: View {
                 VStack (spacing: 20) {
                     MainArea()
                     ContentArea()
-//                        .padding(0)
+                        .padding(.horizontal, 20)
                     ProductArea()
                 }
                 .background(Color("ColorBgBlack"))
@@ -31,19 +32,23 @@ struct MainView: View {
             .coordinateSpace(name: "scroll")
             
             // 토스트View
-            if self.scrollPosition.y <= -2700 {
+            if self.scrollPosition.y >= -2500 && self.showToast {
                 ToastView()
                     .transition(.move(edge: .bottom))
                     .animation(.spring(response: 0.5, dampingFraction: 0.4))
             }
         }
         .background(scrollPosition.y >= -500 ? .black : Color("ColorBgGray"))
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.showToast = true
+            }
+        }
     }
 }
 
 struct ScrollOffsetPreferenceKey: PreferenceKey {
     static var defaultValue: CGPoint = .zero
-    
     static func reduce(value: inout CGPoint, nextValue: () -> CGPoint) {
     }
 }

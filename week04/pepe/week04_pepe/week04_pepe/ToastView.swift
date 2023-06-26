@@ -25,6 +25,7 @@ struct ToastView: View {
         .padding(20)
         .background(Color("ColorBtnSliver"))
         .cornerRadius(17)
+        .padding(.horizontal)
     }
 }
 
