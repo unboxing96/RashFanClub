@@ -67,8 +67,10 @@
 - "Refactor : week04 MainView 리팩토링 완료 - MK"
 
 ### PR
+예시 참고: [https://github.com/oliver-or-not/iPodSwiftUI/pull/5](https://github.com/oliver-or-not/iPodSwiftUI/pull/5)
 
 ### Comment
+예시 참고: [https://github.com/unboxing96/RashFanClub/pull/15](https://github.com/unboxing96/RashFanClub/pull/15)
 
 
 
