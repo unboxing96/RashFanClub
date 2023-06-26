@@ -66,11 +66,8 @@
 - "Docs : week04 ToastView에 주석 추가 완료 - 로이스"
 - "Refactor : week04 MainView 리팩토링 완료 - MK"
 
-### PR
-예시 참고: [올리버의 깃허브](https://github.com/oliver-or-not/iPodSwiftUI/pull/5)
-
-### Comment
-예시 참고: [chatGPT로 자동 생성된 Comment. 파일마다 여기 아래에 추가 코멘트 작성하면 됨](https://github.com/unboxing96/RashFanClub/pull/15)
+### PR & Comment
+예시 참고: [1기 사례](https://github.com/DeveloperAcademy-POSTECH/MC2-Team3-SSAK3/pull/54)
 
 #### Git/GitHub이 헷갈리면?
 예시 참고: [페페 블로그](https://soobamba.tistory.com/entry/github-branch-%EB%A7%8C%EB%93%A4%EC%96%B4%EC%84%9C-%EC%8B%A4%EC%A0%84-%ED%98%91%EC%97%85%ED%95%98%EA%B8%B0)
