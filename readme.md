@@ -1,7 +1,6 @@
 # Rash팬클럽: iOS 클론코딩 & 코드리뷰 & 리팩토링
 
 ## 진행 방식
-<hr>
 
 ### 구성
 - #### 1주차: 클론 코딩
@@ -31,6 +30,44 @@
 - #### 2주차 모임
     1. 랜덤하게 2명 뽑아서 Refactoring 발표
     2. 새로운 과제 부여
+ 
+
+## 컨벤션
+
+### 파일 구조
+- RashFanClub
+  - week03
+  - week04
+    - readme.md
+    - pepe
+      - pepe의 프로젝트 파일
+    - rash
+      - rash의 프로젝트 파일
+
+### 브랜치
+
+#### 가이드
+"{몇 주차}_{닉네임}_{브랜치 번호}"
+
+#### 예시
+- "week03_pepe_01"
+- "week05_malty_18"
+
+### 커밋 메시지
+
+#### 가이드
+"{타입} : #{몇 주차} {내용} - {작성자}"
+
+#### 예시
+- "Feat : week04 구현 완료 - 페페"
+- "Feat : week04 ToastView 애니메이션 구현 완료 - 말티"
+- "Docs : week04 ToastView에 주석 추가 완료 - 로이스"
+- "Refactor : week04 MainView 리팩토링 완료 - MK"
+
+### PR
+
+### Comment
+
 
 
 <br>
