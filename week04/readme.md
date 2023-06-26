@@ -4,9 +4,7 @@
 2. 페페 -> MK, 채드
 3. 채드 -> 말티, 페페
 
-<br>
 <hr>
-<br>
 
 ## 컨벤션 ([자세한 내용](https://github.com/unboxing96/RashFanClub/wiki))
 
