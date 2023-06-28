@@ -54,7 +54,7 @@ struct ContentView: View {
                 .onAppear(){
                     isOnBtn = true
                 }
-                .transition(.move(edge: .bottom) )
+                .transition(.move(edge: .bottom))
                 .frame(maxWidth: .infinity)
                 .frame(height: 68)
                 .padding(.leading,13)
@@ -68,6 +68,14 @@ struct ContentView: View {
 }
 // 첫번쨰 방법 vstack에 고정해놓는다. 그러면 계속뜨긴할듯? 근데 사라지는 거는 스크롤id? 좀 생각해볼 필요가 있다.
 // 두 번쨰 방법 솔직히 저건 도대체 뭘로 만들어졌을까? 모달? sheet? 흠..
+// 리탱글 지오메트리??
+
+struct ScrollOffsetPreferenceKey: PreferenceKey {
+    static var defaultValue: CGPoint = .zero
+
+    static func reduce(value: inout CGPoint, nextValue: () -> CGPoint) {
+    }
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
