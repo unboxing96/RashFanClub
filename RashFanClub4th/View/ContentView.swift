@@ -10,8 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject var dataModel: DataModel
-    @ObservedObject var sizeModel : SizeModel
+    @ObservedObject var data: Data
+    @ObservedObject var size : Size
     
     @State private var isShowingToast = false
     @State private var animationToggle = false
@@ -20,14 +20,15 @@ struct ContentView: View {
         ZStack{
             ScrollView{
                 VStack{
-                    // Main Top
-                    MainArea(dataModel: DataModel(), viewModel: ViewModel(dataModel: DataModel()))
+                    // Main Top [이미지 + 버튼]
+                    MainArea(data: Data(), viewModel: ViewModel(dataModel: Data()))
+                    
                     VStack(spacing : 20){
                         //채드도 놀란 iPhone14 Pro
                         ZStack{
                             Image("ImgContentL01")
                                 .resizable()
-                                .frame(width:sizeModel.imageWidth, height: sizeModel.bigImageHeight)
+                                .frame(width:size.imageWidth, height: size.bigImageHeight)
                                 .padding(.top, 20)
                             VStack(spacing: 0){
                                 Text("채드도 놀란")
@@ -41,14 +42,14 @@ struct ContentView: View {
                                     .fontWeight(.heavy)
                                 Spacer()
                             }
-                            .foregroundColor(Color("ColorFontWhite"))
+                            .foregroundColor(Color.ColorFontWhite)
                         }
                         
                         //Dynamic Island
                         ZStack{
                             Image("ImgContentL02")
                                 .resizable()
-                                .frame(width:sizeModel.imageWidth, height: sizeModel.bigImageHeight)
+                                .frame(width:size.imageWidth, height: size.bigImageHeight)
                             
                             VStack(spacing: 0){
                                 Text("Dynamic Island")
@@ -62,14 +63,14 @@ struct ContentView: View {
                                 Spacer()
                                 
                             }
-                            .foregroundColor(Color("ColorFontWhite"))
+                            .foregroundColor(Color.ColorFontWhite)
                         }
                         
                         // A16칩
                         ZStack{
                             Image("ImgContentSm01")
                                 .resizable()
-                                .frame(width:sizeModel.imageWidth, height: sizeModel.smallImageHeight)
+                                .frame(width:size.imageWidth, height: size.smallImageHeight)
                             VStack{
                                 HStack{
                                     Text("그 모든걸\n가능케 하는\n브레인")
@@ -78,7 +79,7 @@ struct ContentView: View {
                                         .fontWeight(.heavy)
                                         .overlay(
                                             LinearGradient(
-                                                gradient: Gradient(colors: [Color("ColorFontPurple"), Color("ColorFontPurpleEnd")]),
+                                                gradient: Gradient(colors: [Color.ColorFontPurple, Color.ColorFontPurpleEnd]),
                                                 startPoint: .top,
                                                 endPoint: .bottom
                                             )
@@ -97,14 +98,14 @@ struct ContentView: View {
                             }
                             .padding(.top, 40)
                         }
-                        .foregroundColor(Color("ColorFontPurple"))
+                        .foregroundColor(Color.ColorFontPurple)
                         
                         
                         // Text만 있는곳 ("오래 가는 배터리 온종일 올인.")
                         ZStack{
                             Image("ImgContentSm02")
                                 .resizable()
-                                .frame(width:sizeModel.imageWidth, height: sizeModel.smallImageHeight)
+                                .frame(width:size.imageWidth, height: size.smallImageHeight)
                             
                             VStack(spacing: 0){
                                 Text("오래 가는 배터리")
@@ -113,7 +114,7 @@ struct ContentView: View {
                                     .padding(.bottom, 14)
                                     .overlay(
                                         LinearGradient(
-                                            gradient: Gradient(colors: [Color("ColorFontPurple"), Color("ColorFontPurpleEnd")]),
+                                            gradient: Gradient(colors: [Color.ColorFontPurple, Color.ColorFontPurpleEnd]),
                                             startPoint: .top,
                                             endPoint: .bottom
                                         )
@@ -130,7 +131,7 @@ struct ContentView: View {
                                     .fontWeight(.heavy)
                                     .overlay(
                                         LinearGradient(
-                                            gradient: Gradient(colors: [Color("ColorFontPurple"), Color("ColorFontPurpleEnd")]),
+                                            gradient: Gradient(colors: [Color.ColorFontPurple, Color.ColorFontPurpleEnd]),
                                             startPoint: .top,
                                             endPoint: .bottom
                                         )
@@ -147,7 +148,7 @@ struct ContentView: View {
                                     .fontWeight(.heavy)
                                     .overlay(
                                         LinearGradient(
-                                            gradient: Gradient(colors: [Color("ColorFontPurple"), Color("ColorFontPurpleEnd")]),
+                                            gradient: Gradient(colors: [Color.ColorFontPurple, Color.ColorFontPurpleEnd]),
                                             startPoint: .top,
                                             endPoint: .bottom
                                         )
@@ -161,14 +162,14 @@ struct ContentView: View {
                             }
                         }
                         .multilineTextAlignment(.center)
-                        .foregroundColor(Color("ColorFontPurple"))
+                        .foregroundColor(Color.ColorFontPurple)
                         
                         
                         // 상시 표시 디스플레이 ("상시표시형 디스플레이. 잠긴 동안에도 잠드는 법 없이")
                         ZStack{
                             Image("ImgContentL03")
                                 .resizable()
-                                .frame(width:sizeModel.imageWidth, height: sizeModel.bigImageHeight)
+                                .frame(width: size.imageWidth, height: size.bigImageHeight)
                             
                             VStack(spacing: 0){
                                 Text("상시표시형 디스플레이.\n잠긴 동안에도\n잠드는 법 없이.")
@@ -178,7 +179,7 @@ struct ContentView: View {
                                     .multilineTextAlignment(.center)
                                     .overlay(
                                         LinearGradient(
-                                            gradient: Gradient(colors: [Color("ColorFontPurple"), Color("ColorFontPurpleEnd")]),
+                                            gradient: Gradient(colors: [Color.ColorFontPurple, Color.ColorFontPurpleEnd]),
                                             startPoint: .top,
                                             endPoint: .bottom
                                         )
@@ -193,14 +194,14 @@ struct ContentView: View {
                                     )
                                 Spacer()
                             }
-                            .foregroundColor(Color("ColorFontPurple"))
+                            .foregroundColor(Color.ColorFontPurple)
                         }
                         
                         // Ceramic Control 화면
                         ZStack{
                             Image("ImgContentL04")
                                 .resizable()
-                                .frame(width:sizeModel.imageWidth, height: sizeModel.bigImageHeight)
+                                .frame(width:size.imageWidth, height: size.bigImageHeight)
                             
                             VStack(spacing: 0){
                                 Text("Ceramic Shield")
@@ -211,10 +212,10 @@ struct ContentView: View {
                                     .font(.system(size: 24))
                                     .fontWeight(.bold)
                                     .multilineTextAlignment(.center)
-                                    .foregroundColor(Color("ColorFontPurple"))
+                                    .foregroundColor(Color.ColorFontPurple)
                                     .overlay(
                                         LinearGradient(
-                                            gradient: Gradient(colors: [Color("ColorFontPurple"), Color("ColorFontPurpleEnd")]),
+                                            gradient: Gradient(colors: [Color.ColorFontPurple, Color.ColorFontPurpleEnd]),
                                             startPoint: .top,
                                             endPoint: .bottom
                                         )
@@ -228,26 +229,40 @@ struct ContentView: View {
                                     )
                                 Spacer()
                             }
-                            .foregroundColor(Color("ColorFontWhite"))
+                            .foregroundColor(Color.ColorFontWhite)
                         }
                         .padding(.bottom, 0)
                     }
-                    .background(Color("ColorBgBlack"))
+                    .background(Color.ColorBgBlack)
                     ProductArea()
+                    //Height 길이 재려고 만듬(아직 못 뽑음)
+                        .background(GeometryReader { geometry in
+                            Color.clear
+                                .onAppear{
+                                    let productAreaHeight = geometry.size.height
+                                    print("ProductArea height: \(productAreaHeight)")
+                                }
+                        })
                 }
                 
+                //전체 Geometry height + preferenceKey 구하기.
                 .background(GeometryReader { geometry in
                     Color.clear
+                        .onAppear{
+                            let scrollViewHeight = geometry.size.height
+                            print("ScrollView height: \(scrollViewHeight)")
+                        }
                         .preference(key: ScrollOffsetPreferenceKey.self, value: geometry.frame(in: .named("scroll")).origin)
+                        
                 })
                 .onPreferenceChange(ScrollOffsetPreferenceKey.self) { value in
-                    dataModel.scrollPosition = value
+                    data.scrollPosition = value
                 }
             }
         }
         
         //뒷 배경
-        .background(dataModel.scrollPosition.y > -3200 ? Color.black : Color("ColorBgGray"))
+        .background(data.scrollPosition.y > -3200 ? Color.black : Color.ColorBgGray)
         .ignoresSafeArea()
         .coordinateSpace(name: "scroll")
         .onAppear(perform: {
@@ -258,17 +273,17 @@ struct ContentView: View {
         .overlay(
             VStack(spacing: 0){
                 Spacer()
-    // Toast
+                // Toast
                 if isShowingToast{
                     ToastView()
-                        .opacity(dataModel.scrollPosition.y > -2570 ? 1 : 0)
+                        .opacity(data.scrollPosition.y > -2570 ? 1 : 0)
                         .animation(.spring(response: 0.5, dampingFraction: 0.4))
                         .onAppear {
                             withAnimation {
                                 animationToggle.toggle()
                             }
                         }
-                        .padding(.bottom, animationToggle == true && dataModel.scrollPosition.y > -2570 ? 70 : -30)
+                        .padding(.bottom, animationToggle == true && data.scrollPosition.y > -2570 ? 70 : -30)
                 }
             }
         )
@@ -278,7 +293,7 @@ struct ContentView: View {
 //MARK: PREVIEW
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(dataModel: DataModel(), sizeModel: SizeModel())
+        ContentView(data: Data(), size: Size())
     }
 }
 

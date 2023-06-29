@@ -11,7 +11,7 @@ import SwiftUI
 struct RashFanClub4thApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(dataModel: DataModel(), sizeModel: SizeModel())
+            ContentView(data: Data(), size: Size())
         }
     }
 }

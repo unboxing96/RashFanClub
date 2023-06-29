@@ -8,15 +8,10 @@
 import Foundation
 
 
-class SizeModel : ObservableObject, Identifiable{
-    
+class Size : ObservableObject, Identifiable{
     //Image Size
     @Published var imageWidth : CGFloat = 353
     @Published var bigImageHeight : CGFloat = 446
     @Published var smallImageHeight : CGFloat = 324
-    
-    
-    
-    
     
 }

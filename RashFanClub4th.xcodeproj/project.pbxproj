@@ -14,10 +14,11 @@
 		E53CE99D2A3EBB3C00BE59B9 /* MainArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CE99C2A3EBB3C00BE59B9 /* MainArea.swift */; };
 		E53CE99F2A3EBB4F00BE59B9 /* ProductArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CE99E2A3EBB4F00BE59B9 /* ProductArea.swift */; };
 		E53CE9A12A3EC23100BE59B9 /* ColorButtonComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CE9A02A3EC23100BE59B9 /* ColorButtonComponents.swift */; };
-		E53CE9A32A442FDE00BE59B9 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CE9A22A442FDE00BE59B9 /* DataModel.swift */; };
+		E53CE9A32A442FDE00BE59B9 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CE9A22A442FDE00BE59B9 /* Data.swift */; };
 		E53CE9A72A44A60F00BE59B9 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CE9A62A44A60E00BE59B9 /* ToastView.swift */; };
 		E53CE9AC2A4AC58C00BE59B9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CE9AB2A4AC58C00BE59B9 /* ViewModel.swift */; };
-		E53CE9AE2A4AC68100BE59B9 /* SizeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CE9AD2A4AC68100BE59B9 /* SizeModel.swift */; };
+		E53CE9AE2A4AC68100BE59B9 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CE9AD2A4AC68100BE59B9 /* Size.swift */; };
+		E53CE9B02A4C154200BE59B9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CE9AF2A4C154200BE59B9 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +31,11 @@
 		E53CE99C2A3EBB3C00BE59B9 /* MainArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainArea.swift; sourceTree = "<group>"; };
 		E53CE99E2A3EBB4F00BE59B9 /* ProductArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductArea.swift; sourceTree = "<group>"; };
 		E53CE9A02A3EC23100BE59B9 /* ColorButtonComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorButtonComponents.swift; sourceTree = "<group>"; };
-		E53CE9A22A442FDE00BE59B9 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		E53CE9A22A442FDE00BE59B9 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		E53CE9A62A44A60E00BE59B9 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		E53CE9AB2A4AC58C00BE59B9 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		E53CE9AD2A4AC68100BE59B9 /* SizeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeModel.swift; sourceTree = "<group>"; };
+		E53CE9AD2A4AC68100BE59B9 /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
+		E53CE9AF2A4C154200BE59B9 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +89,9 @@
 		E53CE9A82A48A46300BE59B9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E53CE9A22A442FDE00BE59B9 /* DataModel.swift */,
-				E53CE9AD2A4AC68100BE59B9 /* SizeModel.swift */,
+				E53CE9A22A442FDE00BE59B9 /* Data.swift */,
+				E53CE9AD2A4AC68100BE59B9 /* Size.swift */,
+				E53CE9AF2A4C154200BE59B9 /* Color.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,9 +188,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E53CE9A72A44A60F00BE59B9 /* ToastView.swift in Sources */,
-				E53CE9A32A442FDE00BE59B9 /* DataModel.swift in Sources */,
+				E53CE9A32A442FDE00BE59B9 /* Data.swift in Sources */,
 				E53CE9902A395AB900BE59B9 /* ContentView.swift in Sources */,
-				E53CE9AE2A4AC68100BE59B9 /* SizeModel.swift in Sources */,
+				E53CE9B02A4C154200BE59B9 /* Color.swift in Sources */,
+				E53CE9AE2A4AC68100BE59B9 /* Size.swift in Sources */,
 				E53CE98E2A395AB900BE59B9 /* RashFanClub4thApp.swift in Sources */,
 				E53CE99F2A3EBB4F00BE59B9 /* ProductArea.swift in Sources */,
 				E53CE99D2A3EBB3C00BE59B9 /* MainArea.swift in Sources */,

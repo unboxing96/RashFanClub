@@ -16,7 +16,7 @@ struct ProductArea: View {
             VStack(spacing: 0){
                 // "iPhone 14 Pro 더 깊게 살펴보기" 흰색 박스 (Rectangle 안에 overlay로 넣기)
                 Rectangle()
-                    .foregroundColor(Color("ColorBgWhite"))
+                    .foregroundColor(Color.ColorBgWhite)
                     .frame(width: .infinity, height: 173)
                     .overlay(
                         VStack(spacing: 0){
@@ -37,10 +37,9 @@ struct ProductArea: View {
                                     .padding(.top, 10)
                             }
                         }
-                            
                     )
                     .padding(.vertical, 20)
-                    .background(Color("ColorBgGray"))
+                    .background(Color.ColorBgGray)
                 
                 // "iPhone 14 Pro" 쪽 이미지
                 ZStack{
@@ -63,8 +62,8 @@ struct ProductArea: View {
                                         .padding(.horizontal, 14)
                                         .padding(.top, 5)
                                         .padding(.bottom, 3)
-                                        .background(Color("ColorBtnBlue"))
-                                        .foregroundColor(Color("ColorFontWhite"))
+                                        .background(Color.ColorBtnBlue)
+                                        .foregroundColor(Color.ColorFontWhite)
                                         .cornerRadius(13)
                                         .fontWeight(.bold)
                                 }
@@ -73,7 +72,7 @@ struct ProductArea: View {
                                 Text("₩ 1,550,000부터")
                                     .padding(.bottom, 51)
                                     .font(.system(size: 10))
-                                    .foregroundColor(Color("ColorBgBlack"))
+                                    .foregroundColor(Color.ColorBgBlack)
                             }
                         
                         )
@@ -81,7 +80,7 @@ struct ProductArea: View {
 
                 //공유하기 버튼
                 Rectangle()
-                    .foregroundColor(Color("ColorBgWhite"))
+                    .foregroundColor(Color.ColorBgWhite)
                     .frame(width: 128, height: 38)
                     .overlay(
                         VStack{
@@ -107,10 +106,10 @@ struct ProductArea: View {
                     .padding(.horizontal, 10)
                     .multilineTextAlignment(.leading)
                     .font(.system(size: 10))
-                    .foregroundColor(Color("ColorFontLastTextGray"))
+                    .foregroundColor(Color.ColorFontLastTextGray)
             }
         }
-        .background(Color("ColorBgGray"))
+        .background(Color.ColorBgGray)
     }
 }
 

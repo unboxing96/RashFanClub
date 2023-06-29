@@ -5,7 +5,7 @@
 //  Created by 077tech on 2023/06/23.
 //
 
-//withAnimation(interactiveAprint(response: 0.5, dampingFraction: 0.5)
+
 
 // Toast 형식으로 나오는 뷰
 import SwiftUI

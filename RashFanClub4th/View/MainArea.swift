@@ -10,12 +10,12 @@ import SwiftUI
 
 struct MainArea: View {
     
-    @StateObject var dataModel: DataModel
+    @StateObject var data: Data
     @StateObject var viewModel : ViewModel
     
     var body: some View {
         ZStack{
-            Image(dataModel.mainImage)
+            Image(data.mainImage)
                     .resizable()
             VStack(spacing: 0){
                 Text("iPhone 14 Pro")
@@ -29,12 +29,12 @@ struct MainArea: View {
                 
                 Spacer()
                 
-                Text(dataModel.mainText)
+                Text(data.mainText)
                     .font(.system(size: 10))
-                    .foregroundColor(Color("ColorFontDarkGray"))
+                    .foregroundColor(Color.ColorFontDarkGray)
                     .padding(.bottom)
                 
-                ColorButtonComponents(database: dataModel, viewModel: ViewModel(dataModel: dataModel))
+                ColorButtonComponents(database: data, viewModel: ViewModel(dataModel: data))
                     .padding(.bottom)
                 Button(action: {
                     
@@ -42,14 +42,14 @@ struct MainArea: View {
                     Text("AR로 보기")
                     Image(systemName: "arkit")
                 }
-                .foregroundColor(Color("ColorBtnBlue"))
+                .foregroundColor(Color.ColorBtnBlue)
                 .padding(.bottom, 30)
             }
             .multilineTextAlignment(.center)
-            .foregroundColor(Color("ColorFontWhite"))
+            .foregroundColor(Color.ColorFontWhite)
             
         }
-        .background(Color("ColorBgBlack"))
+        .background(Color.ColorBgBlack)
         .frame(width: .infinity, height: 600)
         .padding(.top, 0)
     }
@@ -58,6 +58,6 @@ struct MainArea: View {
 //MARK: PREVIEW
 struct MainArea_Previews: PreviewProvider {
     static var previews: some View {
-        MainArea(dataModel: DataModel(), viewModel: ViewModel(dataModel: DataModel()))
+        MainArea(data: Data(), viewModel: ViewModel(dataModel: Data()))
     }
 }

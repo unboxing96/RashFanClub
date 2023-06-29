@@ -9,7 +9,7 @@
 
 import SwiftUI
 struct ColorButtonComponents: View {
-    @ObservedObject var database: DataModel
+    @ObservedObject var database: Data
     @ObservedObject var viewModel: ViewModel
     
     var body: some View {
@@ -18,7 +18,6 @@ struct ColorButtonComponents: View {
                 let colorOpacity = viewModel.colorButtonOpacity[index]
                 let foregroundColor = viewModel.colorButtonForegroundColor[index]
                 let colorFunction = viewModel.colorButtonFunctions[index]
-
                 colorButton(opacity: colorOpacity, foregroundColor: foregroundColor) {
                     colorFunction()
                 }
@@ -31,7 +30,7 @@ struct ColorButtonComponents: View {
         ZStack {
             // Focus Circle
             Circle()
-                .strokeBorder(Color("ColorBtnBlue"))
+                .strokeBorder(Color.ColorBtnBlue)
                 .frame(width: 31, height: 31)
                 .opacity(opacity)
                 .overlay(
@@ -51,22 +50,6 @@ struct ColorButtonComponents: View {
 //MARK: PREVIEW
 struct ColorButtonComponents_Previews: PreviewProvider {
     static var previews: some View {
-        ColorButtonComponents(database: DataModel(), viewModel: ViewModel(dataModel: DataModel()))
+        ColorButtonComponents(database: Data(), viewModel: ViewModel(dataModel: Data()))
     }
 }
-
-
-
-
-//            colorButton(opacity: database.purpleOpacity, foregroundColor: "ColorBtnDeepPurple"){
-//                database.changeToPurple()
-//            }
-//            colorButton(opacity: database.goldOpacity, foregroundColor: "ColorBtnGold"){
-//                database.changeToGold()
-//            }
-//            colorButton(opacity: database.silverOpacity, foregroundColor: "ColorBtnSilver"){
-//                database.changeToSilver()
-//            }
-//            colorButton(opacity: database.blackOpacity, foregroundColor: "ColorBtnBlack"){
-//                database.changeToBlack()
-//            }

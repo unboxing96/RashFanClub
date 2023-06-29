@@ -4,19 +4,21 @@
 //
 //  Created by 077tech on 2023/06/27.
 //
+// Main View Model
 
 import Foundation
 import SwiftUI
 
 class ViewModel: ObservableObject {
-    @ObservedObject var dataModel: DataModel
+    @ObservedObject var data: Data
     
     @Published var colorButtonOpacity: [Double]
     @Published var colorButtonForegroundColor: [String]
     @Published var colorButtonFunctions: [() -> Void]
     
-    init(dataModel: DataModel) {
-        self.dataModel = dataModel
+    // 생성자
+    init(dataModel: Data) {
+        self.data = dataModel
         self.colorButtonForegroundColor = []
         self.colorButtonOpacity = []
         self.colorButtonFunctions = []
@@ -26,15 +28,17 @@ class ViewModel: ObservableObject {
         setupColorButtonFunctions()
     }
     
+    // Focus 색상 Opacity 조정
     private func setupColorButtonOpacity() {
         colorButtonOpacity = [
-            dataModel.purpleOpacity,
-            dataModel.goldOpacity,
-            dataModel.silverOpacity,
-            dataModel.blackOpacity
+            data.purpleOpacity,
+            data.goldOpacity,
+            data.silverOpacity,
+            data.blackOpacity
         ]
     }
     
+    // 버튼 색상 조정
     private func colorButtonForegroundColorArray() {
         colorButtonForegroundColor = [
             "ColorBtnDeepPurple",
@@ -44,6 +48,7 @@ class ViewModel: ObservableObject {
         ]
     }
     
+    // 함수로 인한 상태값 변화 (자세한 함수 내용은 아래 참조)
     private func setupColorButtonFunctions() {
         colorButtonFunctions = [
             changeToPurple,
@@ -53,45 +58,45 @@ class ViewModel: ObservableObject {
         ]
     }
     
-    //Color 바꾸는 함수
+    //Color 바꾸는 함수 모음
     private func changeToPurple(){
-        dataModel.mainImage = "ImgMain01"
-        dataModel.mainText = "딥 퍼플"
-        dataModel.currentColor = "purple"
-        dataModel.purpleOpacity = 1.0
-        dataModel.goldOpacity = 0.0
-        dataModel.silverOpacity = 0.0
-        dataModel.blackOpacity = 0.0
+        data.mainImage = "ImgMain01"
+        data.mainText = "딥 퍼플"
+        data.currentColor = "purple"
+        data.purpleOpacity = 1.0
+        data.goldOpacity = 0.0
+        data.silverOpacity = 0.0
+        data.blackOpacity = 0.0
     }
     
     private func changeToGold() {
-        dataModel.mainImage = "ImgMain02"
-        dataModel.mainText = "골드"
-        dataModel.currentColor = "gold"
-        dataModel.purpleOpacity = 0.0
-        dataModel.goldOpacity = 1.0
-        dataModel.silverOpacity = 0.0
-        dataModel.blackOpacity = 0.0
+        data.mainImage = "ImgMain02"
+        data.mainText = "골드"
+        data.currentColor = "gold"
+        data.purpleOpacity = 0.0
+        data.goldOpacity = 1.0
+        data.silverOpacity = 0.0
+        data.blackOpacity = 0.0
     }
     
     private func changeToSilver() {
-        dataModel.mainImage = "ImgMain03"
-        dataModel.mainText = "실버"
-        dataModel.currentColor = "silver"
-        dataModel.purpleOpacity = 0.0
-        dataModel.goldOpacity = 0.0
-        dataModel.silverOpacity = 1.0
-        dataModel.blackOpacity = 0.0
+        data.mainImage = "ImgMain03"
+        data.mainText = "실버"
+        data.currentColor = "silver"
+        data.purpleOpacity = 0.0
+        data.goldOpacity = 0.0
+        data.silverOpacity = 1.0
+        data.blackOpacity = 0.0
     }
     
     private func changeToBlack() {
-        dataModel.mainImage = "ImgMain04"
-        dataModel.mainText = "스페이스 블랙"
-        dataModel.currentColor = "black"
-        dataModel.purpleOpacity = 0.0
-        dataModel.goldOpacity = 0.0
-        dataModel.silverOpacity = 0.0
-        dataModel.blackOpacity = 1.0
+        data.mainImage = "ImgMain04"
+        data.mainText = "스페이스 블랙"
+        data.currentColor = "black"
+        data.purpleOpacity = 0.0
+        data.goldOpacity = 0.0
+        data.silverOpacity = 0.0
+        data.blackOpacity = 1.0
     }
     
     

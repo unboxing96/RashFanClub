@@ -7,7 +7,7 @@
 
 //Model + Viewmodel
 import Foundation
-class DataModel : ObservableObject, Identifiable{
+class Data : ObservableObject, Identifiable{
     
     //Scroll Position 잡기
     @Published var scrollPosition: CGPoint = .zero
@@ -22,7 +22,6 @@ class DataModel : ObservableObject, Identifiable{
     @Published var goldOpacity = 0.0
     @Published var silverOpacity = 0.0
     @Published var blackOpacity = 0.0
-    
  
 }
 
