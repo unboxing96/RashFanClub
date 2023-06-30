@@ -48,6 +48,7 @@ struct MainArea: View {
                     .font(.system(size: 10))
                     .foregroundColor(Color("ColorFontGray"))
             }
+            
             VStack(alignment:.center){
                 Text("iPhone 14 Pro")
                     .font(.system(size: 20,weight: .semibold))
@@ -55,7 +56,7 @@ struct MainArea: View {
                 Text("프로 그 이상.")
                     .font(.system(size: 40,weight: .bold))
                     .foregroundColor(Color("ColorFontWhite"))
-                    .padding(.bottom,390)
+                    .padding(.bottom,452)
                 
                 HStack(spacing: 15){
                     Circle()

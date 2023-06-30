@@ -39,17 +39,14 @@ struct ProductArea: View {
                 case "gold":
                     Image("productArea02")
                     .resizable()
-                    .frame(width: .infinity)
                     .frame(height: 538)
                 case "silver":
                     Image("productArea03")
                     .resizable()
-                    .frame(width: .infinity)
                     .frame(height: 538)
                 case "spaceBlack":
                     Image("productArea04")
                     .resizable()
-                    .frame(width: .infinity)
                     .frame(height: 538)
                 default:
                     Image("productArea01")
