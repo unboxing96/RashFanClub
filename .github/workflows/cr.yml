@@ -13,7 +13,19 @@ jobs:
     # if: ${{ contains(github.event.pull_request.labels.*.name, 'chatgpt') }} # Only run when the 'chatgpt' label is attached
     runs-on: ubuntu-latest
     steps:
-      - uses: anc95/ChatGPT-CodeReview@v1.0.10
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Find Swift files
+        id: find-files
+        run: |
+          echo "::set-output name=files::$(find . -name '*.swift')"
+
+      - name: Run code review
+        id: code-review
+        uses: anc95/ChatGPT-CodeReview@v1.0.10
+        with:
+          files: ${{ steps.find-files.outputs.files }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -23,5 +35,5 @@ jobs:
           PROMPT:
           top_p: 1
           temperature: 1
-#           max_tokens: 10000
-#           MAX_PATCH_LENGTH: 10000 # if the patch/diff length is large than MAX_PATCH_LENGTH, will be ignored and won't review. By default, with no MAX_PATCH_LENGTH set, there is also no limit for the patch/diff length.
+          # max_tokens: 10000
+          # MAX_PATCH_LENGTH: 10000 # if the patch/diff length is large than MAX_PATCH_LENGTH, will be ignored and won't review. By default, with no MAX_PATCH_LENGTH set, there is also no limit for the patch/diff length.
