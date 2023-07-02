@@ -64,25 +64,24 @@ struct MainView: View {
 						
 					}
 				}
-				.background(Color("ColorBgGray"))
-				
-				.background (
-					//전체 뷰 높이값
+				//코드리뷰 04번 _ Chad
+				.background{
+					//배경색
+					Color("ColorBgGray")
+
 					GeometryReader { geo -> Color in
 						DispatchQueue.main.async {
 							wholeViewHeight = geo.size.height
 						}
 						return Color.clear
 					}
-				)
-				
-				//스크롤 offset 변화를 감지
-				.background(
+
 					GeometryReader { geometry in
-					Color.clear
-						.preference(key: ScrollOffsetPreferenceKey.self, value: geometry.frame(in: .named("scroll")).origin)
-				})
-				
+						Color.clear
+							.preference(key: ScrollOffsetPreferenceKey.self, value: geometry.frame(in: .named("scroll")).origin)
+					}
+				}
+
 				
 				
 				//preference가 바뀔때마다 ScrollOffsetPreferenceKey.self 에 들어있는 의 값을 value 에 넣는다.
