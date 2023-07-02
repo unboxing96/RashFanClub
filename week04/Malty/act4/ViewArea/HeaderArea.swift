@@ -16,8 +16,6 @@ struct MainBannerContent  {
 
 struct HeaderArea: View {
 	
-
-	
 	private let dataLayout : [ButtonColor] = [.DeepPurple, .Gold, .Silver, .SpaceGray]
     @State var infoIndex : Int = 0
     @State var btnActiveStrokeOffset = [-57, -19, 19, 57]
@@ -80,17 +78,16 @@ struct HeaderArea: View {
     } //view End
     
     ///button active시 나타나는 Stroke
+	//코드리뷰 01번 _ Chad
     private func buttonActiveStroke() -> some View {
-        Rectangle()
-            .foregroundColor(.clear)
-            .frame(width: 31, height: 31)
-            .cornerRadius(31)
-            .overlay(
-                RoundedRectangle(cornerRadius: 31)
-                    .inset(by: 0.5)
-                    .stroke(Color("ColorBtnBlue"), lineWidth: 1)
-                    .offset(x:CGFloat(btnActiveStrokeOffset[infoIndex]), y: 0)
-            )
+		Circle()
+			.foregroundColor(.clear)
+			.frame(width: 31, height: 31)
+			.overlay(
+				Circle()
+					.stroke(Color("ColorBtnBlue"), lineWidth: 1)
+					.offset(x:CGFloat(btnActiveStrokeOffset[infoIndex]), y: 0)
+			)
     }
     
 
