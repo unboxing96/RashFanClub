@@ -8,96 +8,151 @@
 import SwiftUI
 
 struct ContentArea: View {
+    // View의 본문을 정의함.
     var body: some View {
+        // 스크롤 가능한 뷰를 생성함.
         ScrollView {
-            VStack {
-                Image("ImgContentL01")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .overlay {
+            // 첫 번째 이미지를 표시함.
+            Image("ImgContentL01")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .overlay {
+                    VStack {
+                        // 이미지 위에 텍스트를 겹침.
+                        Text("채드도 놀란")
+                            .font(.system(size: 20))
+                            .fontWeight(.bold)
+                        Text("iPhone 14 Pro")
+                            .font(.system(size: 30))
+                            .fontWeight(.bold)
+                        // 공간을 채움.
+                        Spacer()
+                    }
+                    // 텍스트 위 여백을 40으로 설정함.
+                    .padding(.top, 40)
+                    .foregroundColor(FontColor.white.color)
+            }
+            // 두 번째 이미지를 표시함.
+            Image("ImgContentL02")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .overlay {
+                    VStack {
+                        // 이미지 위에 텍스트를 겹침.
+                        Text("Dynamic Island")
+                            .font(.system(size: 20))
+                            .fontWeight(.bold)
+                        Text("iPhone을 다루는 완전히")
+                            .font(.system(size: 30))
+                            .fontWeight(.bold)
+                        Text("새로운 방법.")
+                            .font(.system(size: 30))
+                            .fontWeight(.bold)
+                        // 공간을 채움.
+                        Spacer()
+                    }
+                    // 텍스트 위 여백을 40으로 설정함.
+                    .padding(.top, 40)
+                    .foregroundColor(FontColor.gray.color)
+            }
+            // 세 번째 이미지를 표시함.
+            Image("ImgContentSm01")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .overlay {
+                    HStack {
+                        // 이미지 위에 텍스트를 겹침.
                         VStack {
-                            Text("채드도 놀란")
-                                .font(.system(size: 20))
-                                .fontWeight(.bold)
-                                .foregroundColor(FontColor.white.color)
-                            Text("iPhone 14 Pro")
+                            Text("그 모든 걸\n가능케 하는\n브레인.")
                                 .font(.system(size: 30))
                                 .fontWeight(.bold)
-                                .foregroundColor(FontColor.white.color)
+                            // 공간을 채움.
                             Spacer()
                         }
-                        .padding(.top, 40)
+                        // 공간을 채움.
+                        Spacer()
                     }
-                
-                Image("ImgContentL02")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .overlay {
-                        VStack {
-                            Text("ProMotion으로 선명한 세상을 만나보세요.")
-                                .font(.system(size: 20))
-                                .fontWeight(.bold)
-                                .foregroundColor(FontColor.white.color)
-                            Text("120Hz의 ProMotion 기술로 더욱 매끄럽고 빠른 화면을 경험하세요.")
-                                .font(.system(size: 16))
-                                .foregroundColor(FontColor.white.color)
-                            Spacer()
-                        }
-                        .padding(.top, 40)
-                    }
-                
-                Image("ImgContentL03")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .overlay {
-                        VStack {
-                            Text("그 무엇보다 강력한 카메라.")
-                                .font(.system(size: 20))
-                                .fontWeight(.bold)
-                                .foregroundColor(FontColor.white.color)
-                            Text("더욱 업그레이드된 카메라로 그 어떤 순간도 놓치지 마세요.")
-                                .font(.system(size: 16))
-                                .foregroundColor(FontColor.white.color)
-                            Spacer()
-                        }
-                        .padding(.top, 40)
-                    }
-                
-                Image("ImgContentL04")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .overlay {
-                        VStack {
-                            Text("더욱 강력해진 A16 칩.")
-                                .font(.system(size: 20))
-                                .fontWeight(.bold)
-                                .foregroundColor(FontColor.white.color)
-                            Text("더욱 빠르고, 더욱 효율적인 A16 Bionic.")
-                                .font(.system(size: 16))
-                                .foregroundColor(FontColor.white.color)
-                            Spacer()
-                        }
-                        .padding(.top, 40)
-                    }
-                
-                Image("ImgContentL05")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .overlay {
-                        VStack {
-                            Text("더욱 빠르게, 더욱 편리하게.")
-                                .font(.system(size: 20))
-                                .fontWeight(.bold)
-                                .foregroundColor(FontColor.white.color)
-                            Text("5G의 빠른 속도와 iOS 16의 편의성을 만나보세요.")
-                                .font(.system(size: 16))
-                                .foregroundColor(FontColor.white.color)
-                            Spacer()
-                        }
-                        .padding(.top, 40)
+                    // 텍스트 위와 좌측 여백을 각각 40으로 설정함.
+                    .padding(.top, 40)
+                    .padding(.leading, 40)
+                    .foregroundStyle(LinearGradient(
+                        colors: [FontColor.purpleStart.color, FontColor.purpleEnd.color], startPoint: .top, endPoint: .bottom
+                    ))
+            }
+            // 네 번째 이미지를 표시함.
+            Image("ImgContentSm02")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .overlay {
+                    VStack {
+                        // 이미지 위에 텍스트를 겹침.
+                        Text("오래 가는 배터리")
+                            .font(.system(size: 22))
+                            .fontWeight(.bold)
+                            .foregroundStyle(LinearGradient(
+                                colors: [FontColor.purpleStart.color, FontColor.purpleEnd.color], startPoint: .top, endPoint: .bottom
+                            ))
+                        Text("온종일,")
+                            .font(.system(size: 54))
+                            .fontWeight(.bold)
+                            .foregroundStyle(LinearGradient(
+                                colors: [FontColor.purpleStart.color, FontColor.purpleEnd.color], startPoint: .top, endPoint: .bottom
+                            ))
+                        Text("올인.")
+                            .font(.system(size: 54))
+                            .fontWeight(.bold)
+                            .foregroundStyle(LinearGradient(
+                                colors: [FontColor.purpleStart.color, FontColor.purpleEnd.color], startPoint: .top, endPoint: .bottom
+                            ))
                     }
             }
+            // 다섯 번째 이미지를 표시함.
+            Image("ImgContentL03")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .overlay {
+                    VStack {
+                        // 이미지 위에 텍스트를 겹침.
+                        Text("상시표시형 디스플레이.\n잠긴 동안에도\n잠드는 법 없이.")
+                        // 공간을 채움.
+                        Spacer()
+                    }
+                    // 텍스트 위 여백을 40으로 설정함.
+                    .padding(.top, 40)
+                    .font(.system(size: 24))
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
+                    .foregroundStyle(LinearGradient(
+                        colors: [FontColor.purpleStart.color, FontColor.purpleEnd.color], startPoint: .top, endPoint: .bottom
+                    ))
+            }
+            // 여섯 번째 이미지를 표시함.
+            Image("ImgContentL04")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .overlay {
+                    VStack {
+                        // 이미지 위에 텍스트를 겹침.
+                        Text("Ceramic Shield")
+                            .font(.system(size: 20))
+                            .fontWeight(.bold)
+                            .foregroundColor(FontColor.gray.color)
+                        Text("그 어떤 스마트폰\n글래스보다 견고한 소재.")
+                            .font(.system(size: 24))
+                            .fontWeight(.bold)
+                            .multilineTextAlignment(.center)
+                            .foregroundStyle(LinearGradient(
+                                colors: [FontColor.purpleStart.color, FontColor.purpleEnd.color], startPoint: .top, endPoint: .bottom
+                            ))
+                        // 공간을 채움.
+                        Spacer()
+                    }
+                    // 텍스트 위 여백을 40으로 설정함.
+                    .padding(.top, 40)
+                    .foregroundColor(FontColor.white.color)
+            }
         }
+        // 배경색을 설정함.
         .background(BgColor.black.color)
     }
 }

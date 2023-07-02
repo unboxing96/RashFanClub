@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
-    // 스크롤 위치를 저장하는 상태 변수를 선언함. 초기 값은 CGPoint의 zero임.
     @State private var scrollPosition: CGPoint = .zero
-    // 토스트 메세지 표시 여부를 저장하는 상태 변수를 선언함. 초기 값은 false임.
     @State private var showToast : Bool = false
     
     var body: some View {
@@ -35,26 +33,30 @@ struct MainView: View {
             }
             .coordinateSpace(name: "scroll")
             
-            if self.scrollPosition.y >= -2500 && self.showToast {
+            if showToast && self.scrollPosition.y >= -2500 {
                 ToastView()
                     .transition(.move(edge: .bottom))
-                    .animation(.spring(response: 0.5, dampingFraction: 0.4))
+                    .opacity(showToast ? 1.0 : 0.0)
             }
         }
         .background(scrollPosition.y >= -500 ? BgColor.black.color : BgColor.gray.color)
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                self.showToast = true
+                withAnimation(.spring(response: 0.5, dampingFraction: 0.4)) {
+                    self.showToast = true
+                }
+            }
+        }
+        .onChange(of: scrollPosition.y) { value in
+            withAnimation(.spring(response: 0.5, dampingFraction: 0.4)) {
+                self.showToast = value >= -2460 ? true : false
             }
         }
     }
 }
 
-// 스크롤 오프셋 값을 저장하기 위한 PreferenceKey를 정의함.
 struct ScrollOffsetPreferenceKey: PreferenceKey {
-    // 기본값은 CGPoint의 zero임.
     static var defaultValue: CGPoint = .zero
-    // reduce 함수는 현재 무시함.
     static func reduce(value: inout CGPoint, nextValue: () -> CGPoint) {
     }
 }

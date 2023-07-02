@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@main
+페@main
 struct week04_pepeApp: App {
     var body: some Scene {
         WindowGroup {
