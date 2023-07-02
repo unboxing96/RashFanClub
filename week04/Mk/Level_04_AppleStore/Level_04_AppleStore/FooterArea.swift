@@ -17,7 +17,6 @@ struct FooterArea: View {
                 .foregroundColor(Color("ColorBgGray"))
                 .overlay () {
                     Button {
-                        print("공유하기")
                     } label: {
                         HStack(spacing:10) {
                             Image(systemName: "square.and.arrow.up")
@@ -34,6 +33,7 @@ struct FooterArea: View {
                         .cornerRadius(10)
                     }
                 }
+            
             Rectangle()
                 .frame(maxWidth: .infinity)
                 .frame(height: 124)
