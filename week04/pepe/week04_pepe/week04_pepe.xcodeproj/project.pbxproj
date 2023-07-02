@@ -20,7 +20,6 @@
 		E362AC4D2A4415B400038B33 /* week04_pepeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E362AC4C2A4415B400038B33 /* week04_pepeTests.swift */; };
 		E362AC572A4415B400038B33 /* week04_pepeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E362AC562A4415B400038B33 /* week04_pepeUITests.swift */; };
 		E362AC592A4415B400038B33 /* week04_pepeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E362AC582A4415B400038B33 /* week04_pepeUITestsLaunchTests.swift */; };
-		E39721D52A456E2A0028FF3C /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39721D42A456E2A0028FF3C /* TestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +56,6 @@
 		E362AC522A4415B400038B33 /* week04_pepeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = week04_pepeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E362AC562A4415B400038B33 /* week04_pepeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = week04_pepeUITests.swift; sourceTree = "<group>"; };
 		E362AC582A4415B400038B33 /* week04_pepeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = week04_pepeUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		E39721D42A456E2A0028FF3C /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +114,6 @@
 				E32D6EB02A442BC400A48F5A /* ContentArea.swift */,
 				E32D6EB22A442BC900A48F5A /* ProductArea.swift */,
 				E32D6EB42A442BD400A48F5A /* ToastView.swift */,
-				E39721D42A456E2A0028FF3C /* TestView.swift */,
 				E362AC3F2A4415B400038B33 /* Assets.xcassets */,
 				E362AC412A4415B400038B33 /* Preview Content */,
 			);
@@ -283,7 +280,6 @@
 				E32D6EB32A442BC900A48F5A /* ProductArea.swift in Sources */,
 				E32D6EB12A442BC400A48F5A /* ContentArea.swift in Sources */,
 				E32D6EAD2A44289F00A48F5A /* MainView.swift in Sources */,
-				E39721D52A456E2A0028FF3C /* TestView.swift in Sources */,
 				E362AC3C2A4415B400038B33 /* week04_pepeApp.swift in Sources */,
 				E32D6EB52A442BD400A48F5A /* ToastView.swift in Sources */,
 				E32D6EAF2A442BBD00A48F5A /* MainArea.swift in Sources */,
