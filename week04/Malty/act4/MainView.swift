@@ -107,9 +107,9 @@ struct MainView: View {
 			.ignoresSafeArea()
 			
 
-				BottomButton()
-					.padding(.horizontal, 16)
-					.offset(x: 0, y: bottomBtnOffsetY)
+			BottomButtonView()
+				.padding(.horizontal, 16)
+				.offset(x: 0, y: bottomBtnOffsetY)
 
 		}//ZStack end
 		.ignoresSafeArea()
