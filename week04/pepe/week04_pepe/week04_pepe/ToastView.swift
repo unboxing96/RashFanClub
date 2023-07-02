@@ -12,18 +12,16 @@ struct ToastView: View {
         HStack {
             Text("₩1,250,000부터")
             Spacer()
-            Button {
-                EmptyView()
-            } label: {
+            Button (action: {}) {
                 Text("구입하기")
                     .padding(.horizontal, 20)
                     .padding(.vertical, 6)
             }
-            .background(Color("ColorFontGray"))
+            .background(FontColor.gray.color)
             .cornerRadius(17)
         }
         .padding(20)
-        .background(Color("ColorBtnSliver"))
+        .background(BtnColor.sliver.color)
         .cornerRadius(17)
         .padding(.horizontal)
     }
