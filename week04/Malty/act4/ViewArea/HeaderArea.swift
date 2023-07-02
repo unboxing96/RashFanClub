@@ -56,7 +56,7 @@ struct HeaderArea: View {
 						//버튼 클릭시, Index / 색 값을 넘겨주고, Index 값으로 buttonActiveStroke 의 Offset도 결정해줌.
 						
 						ForEach(dataLayout.indices,  id: \.self) { index in
-							button(index: index, buttonColor: dataLayout[index])
+							colorButton(index: index, buttonColor: dataLayout[index])
 						}
 						
 					}
@@ -92,17 +92,20 @@ struct HeaderArea: View {
     
 
     ///이미지 / 문구 변경 버튼
-    private func button(index: Int, buttonColor :  ButtonColor) -> some View {
-        Button(action: {
-            withAnimation(.interactiveSpring(response: 0.9, dampingFraction: 0.8)) {
-                infoIndex = index
-            }
-        }) {
-            Circle()
-                .frame(width: 23)
-				.foregroundColor(Color(buttonColor.name))
-        }
-    }
+	private func colorButton(index: Int, buttonColor :  ButtonColor) -> some View {
+			Circle()
+				.frame(width: 23, height: 23)
+				.overlay(
+					Circle()
+						.frame(width: 23)
+						.foregroundColor(Color(buttonColor.name))
+				)
+				.onTapGesture {
+					withAnimation(.interactiveSpring(response: 0.9, dampingFraction: 0.8)) {
+						infoIndex = index
+					}
+				}
+		}
     
 }
 
