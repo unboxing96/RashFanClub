@@ -30,7 +30,7 @@ struct ContentArea: View {
                     }
                     // 텍스트 위 여백을 40으로 설정함.
                     .padding(.top, 40)
-                    .foregroundColor(Color("ColorFontWhite"))
+                    .foregroundColor(FontColor.white.color)
             }
             // 두 번째 이미지를 표시함.
             Image("ImgContentL02")
@@ -53,7 +53,7 @@ struct ContentArea: View {
                     }
                     // 텍스트 위 여백을 40으로 설정함.
                     .padding(.top, 40)
-                    .foregroundColor(Color("ColorFontGray"))
+                    .foregroundColor(FontColor.gray.color)
             }
             // 세 번째 이미지를 표시함.
             Image("ImgContentSm01")
@@ -76,7 +76,7 @@ struct ContentArea: View {
                     .padding(.top, 40)
                     .padding(.leading, 40)
                     .foregroundStyle(LinearGradient(
-                        colors: [Color("ColorFontPurpleStart"), Color("ColorFontPurpleEnd")], startPoint: .top, endPoint: .bottom
+                        colors: [FontColor.purpleStart.color, FontColor.purpleEnd.color], startPoint: .top, endPoint: .bottom
                     ))
             }
             // 네 번째 이미지를 표시함.
@@ -90,19 +90,19 @@ struct ContentArea: View {
                             .font(.system(size: 22))
                             .fontWeight(.bold)
                             .foregroundStyle(LinearGradient(
-                                colors: [Color("ColorFontPurpleStart"), Color("ColorFontPurpleEnd")], startPoint: .top, endPoint: .bottom
+                                colors: [FontColor.purpleStart.color, FontColor.purpleEnd.color], startPoint: .top, endPoint: .bottom
                             ))
                         Text("온종일,")
                             .font(.system(size: 54))
                             .fontWeight(.bold)
                             .foregroundStyle(LinearGradient(
-                                colors: [Color("ColorFontPurpleStart"), Color("ColorFontPurpleEnd")], startPoint: .top, endPoint: .bottom
+                                colors: [FontColor.purpleStart.color, FontColor.purpleEnd.color], startPoint: .top, endPoint: .bottom
                             ))
                         Text("올인.")
                             .font(.system(size: 54))
                             .fontWeight(.bold)
                             .foregroundStyle(LinearGradient(
-                                colors: [Color("ColorFontPurpleStart"), Color("ColorFontPurpleEnd")], startPoint: .top, endPoint: .bottom
+                                colors: [FontColor.purpleStart.color, FontColor.purpleEnd.color], startPoint: .top, endPoint: .bottom
                             ))
                     }
             }
@@ -123,7 +123,7 @@ struct ContentArea: View {
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
                     .foregroundStyle(LinearGradient(
-                        colors: [Color("ColorFontPurpleStart"), Color("ColorFontPurpleEnd")], startPoint: .top, endPoint: .bottom
+                        colors: [FontColor.purpleStart.color, FontColor.purpleEnd.color], startPoint: .top, endPoint: .bottom
                     ))
             }
             // 여섯 번째 이미지를 표시함.
@@ -136,24 +136,24 @@ struct ContentArea: View {
                         Text("Ceramic Shield")
                             .font(.system(size: 20))
                             .fontWeight(.bold)
-                            .foregroundColor(Color("ColorFontGray"))
+                            .foregroundColor(FontColor.gray.color)
                         Text("그 어떤 스마트폰\n글래스보다 견고한 소재.")
                             .font(.system(size: 24))
                             .fontWeight(.bold)
                             .multilineTextAlignment(.center)
                             .foregroundStyle(LinearGradient(
-                                colors: [Color("ColorFontPurpleStart"), Color("ColorFontPurpleEnd")], startPoint: .top, endPoint: .bottom
+                                colors: [FontColor.purpleStart.color, FontColor.purpleEnd.color], startPoint: .top, endPoint: .bottom
                             ))
                         // 공간을 채움.
                         Spacer()
                     }
                     // 텍스트 위 여백을 40으로 설정함.
                     .padding(.top, 40)
-                    .foregroundColor(Color("ColorFontWhite"))
+                    .foregroundColor(FontColor.white.color)
             }
         }
         // 배경색을 설정함.
-        .background(Color("ColorBgBlack"))
+        .background(BgColor.black.color)
     }
 }
 
