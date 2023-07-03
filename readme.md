@@ -58,16 +58,28 @@
 ### 커밋 메시지
 
 #### 가이드
-- "{타입} : #{몇 주차} {내용} - {작성자}"
+- "{타입} : #{몇 주차} {내용} - {리뷰어_#Comment번호}"
 
 #### 예시
-- "Feat : week04 구현 완료 - 페페"
-- "Feat : week04 ToastView 애니메이션 구현 완료 - 말티"
-- "Docs : week04 ToastView에 주석 추가 완료 - 로이스"
-- "Refactor : week04 MainView 리팩토링 완료 - MK"
+- "Feat : week04 구현 완료"
+- "Feat : week04 ToastView 애니메이션 구현 완료 - 말티_#18"
+- "Docs : week04 ToastView에 주석 추가 완료 - 페페_#3"
+- "Refactor : week04 MainView 리팩토링 완료"
 
 ### PR & Comment
-예시 참고: [1기 사례](https://github.com/DeveloperAcademy-POSTECH/MC2-Team3-SSAK3/pull/54)
+
+#### Comment 가이드
+![Comment 다는 법](https://i.ibb.co/qxx862M/2023-07-03-5-39-04.png)
+- 코드 라인 diff를 클릭 or 드래그 해서 Comment 달기
+- {Comment 번호}. {코멘트 내용}
+
+#### Comment 예시
+- 코드 라인 위치는 옵션; 해당 위치 드래그 해서 comment 달 것이기 때문에.
+- 3. (MainView 25~) .background() 연속 선언의 필요성
+- 7. Model 명칭 “itemOtherColor”의 변경 필요성
+ 
+좋은 PR: [이안 사례](https://github.com/LeeSungNo-ian/EyeTracking-ARKit/pull/4)
+좋은 Comment: [1기 사례](https://github.com/DeveloperAcademy-POSTECH/MC2-Team3-SSAK3/pull/54)
 
 #### Git/GitHub이 헷갈리면?
 예시 참고: [페페 블로그](https://soobamba.tistory.com/entry/github-branch-%EB%A7%8C%EB%93%A4%EC%96%B4%EC%84%9C-%EC%8B%A4%EC%A0%84-%ED%98%91%EC%97%85%ED%95%98%EA%B8%B0)
@@ -99,7 +111,7 @@
 ### 3주차: 알람
 
 |Page 01|Page 02|Page 03|Page 04|
-|---|---|---|---|
+|---|---|---|---|---|
 |<img src="./history/week03_01.png">|<img src="./history/week03_02.png">|<img src="./history/week03_03.png">|<img src="./history/week03_04.png">|
 
 <br>
