@@ -20,6 +20,7 @@ var buttonInfos =
   ButtonInfos(imageTitle: "ImgMain04", productColor: "스페이스 블랙", buttonColor: "ColorBtnBlack")
 ]
 
+//circle을 클릭할 때마다 index 변수를 통해 이미지명, 제품 색상, 버튼 색상이 변경됩니다.
 struct HeaderArea: View {
     @State var imgTitle = buttonInfos[0].imageTitle
     @State var productColor = buttonInfos[0].productColor
@@ -27,13 +28,13 @@ struct HeaderArea: View {
     
     var body: some View {
         VStack{
-            Image("\(imgTitle)")
+            Image(imgTitle)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: .infinity)
                 .overlay(alignment:.bottom) {
                     VStack(spacing:14){
-                        Text("\(buttonInfos[currentIndex].productColor)")
+                        Text(buttonInfos[currentIndex].productColor)
                             .foregroundColor(Color("ColorFontDarkGray"))
                             .font(.system(size: 10))
                         VStack(spacing:20){
@@ -87,3 +88,4 @@ struct HeaderArea_Previews: PreviewProvider {
         HeaderArea()
     }
 }
+

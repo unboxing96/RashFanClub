@@ -37,13 +37,11 @@ struct ContentArea: View {
                         .offset(y:40)
                 }
                 
-                
                 imageLayout(imageTitle: "ImgContentSm01", overlayAlignment: .topLeading, leadingOffset: 0, topOffset: 40) {
                     Text("그 모든걸\n가능케 하는\n브레인.")
                         .customLinearGradient(fontSize: 22)
                         .offset(x:37, y:40)
                 }
-                
                 
                 imageLayout(imageTitle: "ImgContentSm02", overlayAlignment: .center, leadingOffset: 0, topOffset: 40) {
                     Text("오래 가는 배터리")

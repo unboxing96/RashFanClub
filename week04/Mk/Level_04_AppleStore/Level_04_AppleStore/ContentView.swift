@@ -20,14 +20,13 @@ struct ContentView: View {
     @State var partOfProductAreaHeight: CGFloat
     
     @State private var scrollPosition: CGPoint = .zero
-    
-    @State var bottomButtonOffset: Double = 200
+    @State private var bottomButtonOffset: Double = 200
     
     var body: some View {
         
         ZStack(alignment: .bottom) {
             ScrollView(){
-                VStack(spacing:20) {//wholeview
+                VStack(spacing:20) {
                     
                     VStack(spacing:20){
                         HeaderArea()
@@ -37,6 +36,7 @@ struct ContentView: View {
                     //HeaderArea, ContentArea
                     
                     VStack{
+                        //각 Area의 높이를 구하기 위해 해당 부분에 투명한 배경을 적용시키고, 그 배경의 높이를 구합니다.
                         ProductArea(partOfProductAreaHeight: $partOfProductAreaHeight)
                             .background(
                                 GeometryReader {geo -> Color in
@@ -70,6 +70,7 @@ struct ContentView: View {
                         Color.clear
                             .preference(key:ScrollOffsetPreferenceKey.self, value: geometry.frame(in: .named("Scroll")).origin)
                     })
+                //현재 스크롤 위치값을 설정해둔 높이와 비교하여 bottomButton이 사라지게 합니다.
                     .onPreferenceChange(ScrollOffsetPreferenceKey.self){value in
                         self.scrollPosition = value
                         
@@ -84,7 +85,6 @@ struct ContentView: View {
                             }
                         }
                     }//ScrollView End
-                    .ignoresSafeArea()
             } //ZStack End
             .background(
                 VStack(spacing:0){
@@ -92,7 +92,6 @@ struct ContentView: View {
                     Color("ColorBgGray")
                 }
             )
-            .ignoresSafeArea()
             BottomButton()
                 .offset(y: bottomButtonOffset)
         }//Z
