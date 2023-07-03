@@ -69,7 +69,7 @@
 ### PR & Comment
 
 #### Comment 가이드
-![Comment 다는 법](https://i.ibb.co/qxx862M/2023-07-03-5-39-04.png)
+![Comment 다는 법](https://i.ibb.co/qxx862M/2023-07-03-5-39-04.png")
 - 코드 라인 diff를 클릭 or 드래그 해서 Comment 달기
 - {Comment 번호}. {코멘트 내용}
 
@@ -77,9 +77,10 @@
 - 코드 라인 위치는 옵션; 해당 위치 드래그 해서 comment 달 것이기 때문에.
 - 3. (MainView 25~) .background() 연속 선언의 필요성
 - 7. Model 명칭 “itemOtherColor”의 변경 필요성
- 
-좋은 PR: [이안 사례](https://github.com/LeeSungNo-ian/EyeTracking-ARKit/pull/4)
-좋은 Comment: [1기 사례](https://github.com/DeveloperAcademy-POSTECH/MC2-Team3-SSAK3/pull/54)
+
+#### 사례
+- 좋은 PR: [이안 사례](https://github.com/LeeSungNo-ian/EyeTracking-ARKit/pull/4)
+- 좋은 Comment: [1기 사례](https://github.com/DeveloperAcademy-POSTECH/MC2-Team3-SSAK3/pull/54)
 
 #### Git/GitHub이 헷갈리면?
 예시 참고: [페페 블로그](https://soobamba.tistory.com/entry/github-branch-%EB%A7%8C%EB%93%A4%EC%96%B4%EC%84%9C-%EC%8B%A4%EC%A0%84-%ED%98%91%EC%97%85%ED%95%98%EA%B8%B0)
