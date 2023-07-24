@@ -12,6 +12,10 @@ struct chadApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+//            TestView()
+//            Test2View()
+//            Test3View()
+//            TestView4()
         }
     }
 }
