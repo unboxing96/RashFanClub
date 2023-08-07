@@ -23,10 +23,10 @@
 #### 가이드
 - "{타입}#{PR번호}: {내용}"
 
-##### 최초 업로드
-- "Feat#34: week04 구현 완료"
+##### 최초 PR
+- "Feat: week04 구현 완료"
 
-##### 코드 리뷰
+##### PR 이후 코드 리뷰
 - "Feat#18:  week04 ToastView 애니메이션 구현 완료"
 - "Docs#3 : week04 ToastView에 주석 추가 완료"
 - "Refactor#17 : week04 MainView 리팩토링 완료"
