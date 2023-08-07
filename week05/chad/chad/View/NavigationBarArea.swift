@@ -13,6 +13,8 @@ struct NavigationBarArea: View {
     @State var leftPaddingForDay = 23.0
     @State var rightPaddingForDay = 350.0
 
+    let numbers = [0,1,2,3,4,5,6,7]
+    
     var body: some View {
         VStack(spacing: 0){
             CustomTopTabBar(selectedPage: $selectedPage)
@@ -37,6 +39,11 @@ struct NavigationBarArea: View {
             }
             
             TabView(selection: $selectedPage) {
+//                ForEach(numbers, id: \.self) { number in
+//                    AllDayView(viewModel: viewModel, selectedPage: $selectedPage).tag(number)
+//                }
+                // 미리 그려져있어야 하는데 이렇게 어떤식으로 할 수 있을까?
+//
                 MondayView(viewModel: viewModel).tag(0)
                 TuesdayView(viewModel: viewModel).tag(1)
                 WednesdayView(viewModel: viewModel).tag(2)

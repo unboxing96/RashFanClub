@@ -19,7 +19,6 @@ struct HeaderArea: View {
     @State var image8Opacity : Double = 0.0
     
     
-    
     var body: some View {
         ZStack{
             ZStack{
@@ -80,30 +79,46 @@ struct HeaderArea: View {
                     })
                     .onPreferenceChange(ScrollOffsetPreferenceKey.self) { value in
                         self.scrollPosition = value
-                        print("\(scrollPosition.x)")
-                        
-                        //FirstSlide
-                        image1Opacity = findCertainOpacityOff(position: scrollPosition.x)
-                        image2Opacity = findCertainOpacityOn(position: scrollPosition.x)
-                        //SecondSlide
-                        image2Opacity = findCertainOpacityOff2(position: scrollPosition.x)
-                        image3Opacity = findCertainOpacityOn2(position: scrollPosition.x)
-                        //ThirdSlide
-                        image3Opacity = findCertainOpacityOff3(position: scrollPosition.x)
-                        image4Opacity = findCertainOpacityOn3(position: scrollPosition.x)
-                        //FourthSlide
-                        image4Opacity = findCertainOpacityOff4(position: scrollPosition.x)
-                        image5Opacity = findCertainOpacityOn4(position: scrollPosition.x)
-                        //FifthSlide
-                        image5Opacity = findCertainOpacityOff5(position: scrollPosition.x)
-                        image6Opacity = findCertainOpacityOn5(position: scrollPosition.x)
-                        //SixthSlide
-                        image6Opacity = findCertainOpacityOff6(position: scrollPosition.x)
-                        image7Opacity = findCertainOpacityOn6(position: scrollPosition.x)
-                        //SeventhSlide
-                        image7Opacity = findCertainOpacityOff7(position: scrollPosition.x)
-                        image8Opacity = findCertainOpacityOn7(position: scrollPosition.x)
-                        
+
+                        image1Opacity = opacityOff(position: scrollPosition.x, index: 0.0)
+                        image2Opacity = opacityOn(position: scrollPosition.x, index: 0.0)
+                        image2Opacity = opacityOff(position: scrollPosition.x, index: 1.0)
+                        image3Opacity = opacityOn(position: scrollPosition.x, index: 1.0)
+                        image3Opacity = opacityOff(position: scrollPosition.x, index: 2.0)
+                        image4Opacity = opacityOn(position: scrollPosition.x, index: 2.0)
+                        image4Opacity = opacityOff(position: scrollPosition.x, index: 3.0)
+                        image5Opacity = opacityOn(position: scrollPosition.x, index: 3.0)
+                        image5Opacity = opacityOff(position: scrollPosition.x, index: 4.0)
+                        image6Opacity = opacityOn(position: scrollPosition.x, index: 4.0)
+                        image6Opacity = opacityOff(position: scrollPosition.x, index: 5.0)
+                        image7Opacity = opacityOn(position: scrollPosition.x, index: 5.0)
+                        image7Opacity = opacityOff(position: scrollPosition.x, index: 6.0)
+                        image8Opacity = opacityOn(position: scrollPosition.x, index: 6.0)
+                    
+                        print(value)
+//
+//                        //FirstSlide
+//                        image1Opacity = findCertainOpacityOff(position: scrollPosition.x)
+//                        image2Opacity = findCertainOpacityOn(position: scrollPosition.x)
+//                        //SecondSlide
+//                        image2Opacity = findCertainOpacityOff2(position: scrollPosition.x)
+//                        image3Opacity = findCertainOpacityOn2(position: scrollPosition.x)
+//                        //ThirdSlide
+//                        image3Opacity = findCertainOpacityOff3(position: scrollPosition.x)
+//                        image4Opacity = findCertainOpacityOn3(position: scrollPosition.x)
+//                        //FourthSlide
+//                        image4Opacity = findCertainOpacityOff4(position: scrollPosition.x)
+//                        image5Opacity = findCertainOpacityOn4(position: scrollPosition.x)
+//                        //FifthSlide
+//                        image5Opacity = findCertainOpacityOff5(position: scrollPosition.x)
+//                        image6Opacity = findCertainOpacityOn5(position: scrollPosition.x)
+//                        //SixthSlide
+//                        image6Opacity = findCertainOpacityOff6(position: scrollPosition.x)
+//                        image7Opacity = findCertainOpacityOn6(position: scrollPosition.x)
+//                        //SeventhSlide
+//                        image7Opacity = findCertainOpacityOff7(position: scrollPosition.x)
+//                        image8Opacity = findCertainOpacityOn7(position: scrollPosition.x)
+//
                         
                     }
                     .onAppear {
@@ -118,89 +133,102 @@ struct HeaderArea: View {
        
     }
     
-    //First Slide
-    func findCertainOpacityOff(position : Double) -> Double{
+    
+    func opacityOff(position : Double, index : Double) -> Double{
         var opacity : Double = 0.0
-        opacity = position / 393.0 + 1.0
+        opacity = (position+(index * 393.0)) / 393.0 + 1.0
         return opacity
     }
-    func findCertainOpacityOn(position : Double) -> Double{
+    func opacityOn(position : Double, index : Double) -> Double{
         var opacity : Double = 0.0
-        opacity = -position / 393.0 + 1.0
+        opacity = -(position+(index * 393.0)) / 393.0 + 1.0
         return opacity
     }
     
-    //Second Slide
-    func findCertainOpacityOff2(position : Double) -> Double{
-        var opacity : Double = 0.0
-        opacity = (position+393.0) / 393.0 + 1.0
-        return opacity
-    }
-    func findCertainOpacityOn2(position : Double) -> Double{
-        var opacity : Double = 0.0
-        opacity = -(position+393.0) / 393.0 + 1.0
-        return opacity
-    }
-    
-    //Third Slide
-    func findCertainOpacityOff3(position : Double) -> Double{
-        var opacity : Double = 0.0
-        opacity = (position+786.0) / 393.0 + 1.0
-        return opacity
-    }
-    func findCertainOpacityOn3(position : Double) -> Double{
-        var opacity : Double = 0.0
-        opacity = -(position+786.0) / 393.0 + 1.0
-        return opacity
-    }
-    
-    //Fourth Slide
-    func findCertainOpacityOff4(position : Double) -> Double{
-        var opacity : Double = 0.0
-        opacity = (position+1179.0) / 393.0 + 1.0
-        return opacity
-    }
-    func findCertainOpacityOn4(position : Double) -> Double{
-        var opacity : Double = 0.0
-        opacity = -(position+1179.0) / 393.0 + 1.0
-        return opacity
-    }
-    
-    //Fifth Slide
-    func findCertainOpacityOff5(position : Double) -> Double{
-        var opacity : Double = 0.0
-        opacity = (position+1572.0) / 393.0 + 1.0
-        return opacity
-    }
-    func findCertainOpacityOn5(position : Double) -> Double{
-        var opacity : Double = 0.0
-        opacity = -(position+1572.0) / 393.0 + 1.0
-        return opacity
-    }
-    
-    //Sixth Slide
-    func findCertainOpacityOff6(position : Double) -> Double{
-        var opacity : Double = 0.0
-        opacity = (position+1965.0) / 393.0 + 1.0
-        return opacity
-    }
-    func findCertainOpacityOn6(position : Double) -> Double{
-        var opacity : Double = 0.0
-        opacity = -(position+1965.0) / 393.0 + 1.0
-        return opacity
-    }
-    
-    //Seventh Slide
-    func findCertainOpacityOff7(position : Double) -> Double{
-        var opacity : Double = 0.0
-        opacity = (position+2358.0) / 393.0 + 1.0
-        return opacity
-    }
-    func findCertainOpacityOn7(position : Double) -> Double{
-        var opacity : Double = 0.0
-        opacity = -(position+2358.0) / 393.0 + 1.0
-        return opacity
-    }
+//
+//    //First Slide
+//    func findCertainOpacityOff(position : Double) -> Double{
+//        var opacity : Double = 0.0
+//        opacity = position / 393.0 + 1.0
+//        return opacity
+//    }
+//    func findCertainOpacityOn(position : Double) -> Double{
+//        var opacity : Double = 0.0
+//        opacity = -position / 393.0 + 1.0
+//        return opacity
+//    }
+//
+//    //Second Slide
+//    func findCertainOpacityOff2(position : Double) -> Double{
+//        var opacity : Double = 0.0
+//        opacity = (position+393.0) / 393.0 + 1.0
+//        return opacity
+//    }
+//    func findCertainOpacityOn2(position : Double) -> Double{
+//        var opacity : Double = 0.0
+//        opacity = -(position+393.0) / 393.0 + 1.0
+//        return opacity
+//    }
+//
+//    //Third Slide
+//    func findCertainOpacityOff3(position : Double) -> Double{
+//        var opacity : Double = 0.0
+//        opacity = (position+786.0) / 393.0 + 1.0
+//        return opacity
+//    }
+//    func findCertainOpacityOn3(position : Double) -> Double{
+//        var opacity : Double = 0.0
+//        opacity = -(position+786.0) / 393.0 + 1.0
+//        return opacity
+//    }
+//
+//    //Fourth Slide
+//    func findCertainOpacityOff4(position : Double) -> Double{
+//        var opacity : Double = 0.0
+//        opacity = (position+1179.0) / 393.0 + 1.0
+//        return opacity
+//    }
+//    func findCertainOpacityOn4(position : Double) -> Double{
+//        var opacity : Double = 0.0
+//        opacity = -(position+1179.0) / 393.0 + 1.0
+//        return opacity
+//    }
+//
+//    //Fifth Slide
+//    func findCertainOpacityOff5(position : Double) -> Double{
+//        var opacity : Double = 0.0
+//        opacity = (position+1572.0) / 393.0 + 1.0
+//        return opacity
+//    }
+//    func findCertainOpacityOn5(position : Double) -> Double{
+//        var opacity : Double = 0.0
+//        opacity = -(position+1572.0) / 393.0 + 1.0
+//        return opacity
+//    }
+//
+//    //Sixth Slide
+//    func findCertainOpacityOff6(position : Double) -> Double{
+//        var opacity : Double = 0.0
+//        opacity = (position+1965.0) / 393.0 + 1.0
+//        return opacity
+//    }
+//    func findCertainOpacityOn6(position : Double) -> Double{
+//        var opacity : Double = 0.0
+//        opacity = -(position+1965.0) / 393.0 + 1.0
+//        return opacity
+//    }
+//
+//    //Seventh Slide
+//    func findCertainOpacityOff7(position : Double) -> Double{
+//        var opacity : Double = 0.0
+//        opacity = (position+2358.0) / 393.0 + 1.0
+//        return opacity
+//    }
+//    func findCertainOpacityOn7(position : Double) -> Double{
+//        var opacity : Double = 0.0
+//        opacity = -(position+2358.0) / 393.0 + 1.0
+//        return opacity
+//    }
 }
 
 struct ScrollOffsetPreferenceKey: PreferenceKey {

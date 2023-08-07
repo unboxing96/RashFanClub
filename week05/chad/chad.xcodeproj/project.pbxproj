@@ -28,6 +28,7 @@
 		E53CEA092A540EF900BE59B9 /* NewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CEA082A540EF900BE59B9 /* NewView.swift */; };
 		E53CEA0D2A55868D00BE59B9 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CEA0C2A55868D00BE59B9 /* data.swift */; };
 		E53CEA142A564C1100BE59B9 /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CEA132A564C1100BE59B9 /* ViewBuilder.swift */; };
+		E59371FA2A7EBAD30031F420 /* AllDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59371F92A7EBAD30031F420 /* AllDayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		E53CEA082A540EF900BE59B9 /* NewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewView.swift; sourceTree = "<group>"; };
 		E53CEA0C2A55868D00BE59B9 /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
 		E53CEA132A564C1100BE59B9 /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
+		E59371F92A7EBAD30031F420 /* AllDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 		E53CE9F82A54011300BE59B9 /* WebtoonView */ = {
 			isa = PBXGroup;
 			children = (
+				E59371F92A7EBAD30031F420 /* AllDayView.swift */,
 				E53CE9F62A54010F00BE59B9 /* MondayView.swift */,
 				E53CE9F92A54016400BE59B9 /* TuesdayView.swift */,
 				E53CE9FE2A540E3700BE59B9 /* WednesdayView.swift */,
@@ -243,6 +246,7 @@
 				E53CEA072A540EEF00BE59B9 /* SundayView.swift in Sources */,
 				E53CEA092A540EF900BE59B9 /* NewView.swift in Sources */,
 				E53CE9E82A53F54C00BE59B9 /* HeaderArea.swift in Sources */,
+				E59371FA2A7EBAD30031F420 /* AllDayView.swift in Sources */,
 				E53CE9FF2A540E3700BE59B9 /* WednesdayView.swift in Sources */,
 				E53CE9F12A53F5B900BE59B9 /* FooterArea.swift in Sources */,
 				E53CE9D92A5323C300BE59B9 /* chadApp.swift in Sources */,

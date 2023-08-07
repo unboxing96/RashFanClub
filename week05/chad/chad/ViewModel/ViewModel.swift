@@ -16,6 +16,8 @@ class ViewModel: ObservableObject, Identifiable {
         var webtoonRating: String
     }
     
+    @Published var webtoonNumber = 0
+    
     @Published var mondayWebtoonView: [WebtoonComponent] = []
     @Published var tuesdayWebtoonView: [WebtoonComponent] = []
     @Published var wednesdayWebtoonView: [WebtoonComponent] = []

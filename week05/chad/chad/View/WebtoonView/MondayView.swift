@@ -12,48 +12,58 @@ struct MondayView: View {
     @StateObject var viewModel : ViewModel
     
     var body: some View {
-        VStack{
-            HStack{
-                ForEach(viewModel.mondayWebtoonView.indices) { index in
-                    if index < 3{
-                        let webtoonComponent = viewModel.mondayWebtoonView[index]
-                        webtoonComponentView(webtoonComponent: webtoonComponent)
-                    }
-                }
-            }
-            HStack{
-                ForEach(viewModel.mondayWebtoonView.indices) { index in
-                    if index < 6 && index >= 3{
-                        let webtoonComponent = viewModel.mondayWebtoonView[index]
-                        webtoonComponentView(webtoonComponent: webtoonComponent)
-                    }
-                }
-            }
-            HStack{
-                ForEach(viewModel.mondayWebtoonView.indices) { index in
-                    if index < 9 && index >= 6{
-                        let webtoonComponent = viewModel.mondayWebtoonView[index]
-                        webtoonComponentView(webtoonComponent: webtoonComponent)
-                    }
-                }
-            }
-            HStack{
-                ForEach(viewModel.mondayWebtoonView.indices) { index in
-                    if index < 12 && index >= 9{
-                        let webtoonComponent = viewModel.mondayWebtoonView[index]
-                        webtoonComponentView(webtoonComponent: webtoonComponent)
-                    }
-                }
-            }
-            
-            
-        }
- 
         
+        VStack {
+            ForEach(0..<4) { row in
+                HStack {
+                    ForEach((row * 3)..<(row * 3 + 3)) { index in
+                        let webtoonComponent = viewModel.mondayWebtoonView[index]
+                        webtoonComponentView(webtoonComponent: webtoonComponent)
+                    }
+                }
+            }
         }
-
-        
     }
+    
+//
+//        VStack{
+//            HStack{
+//                ForEach(viewModel.mondayWebtoonView.indices) { index in
+//                    if index < 3{
+//                        let webtoonComponent = viewModel.mondayWebtoonView[index]
+//                        webtoonComponentView(webtoonComponent: webtoonComponent)
+//                    }
+//                }
+//            }
+//            HStack{
+//                ForEach(viewModel.mondayWebtoonView.indices) { index in
+//                    if index < 6 && index >= 3{
+//                        let webtoonComponent = viewModel.mondayWebtoonView[index]
+//                        webtoonComponentView(webtoonComponent: webtoonComponent)
+//                    }
+//                }
+//            }
+//            HStack{
+//                ForEach(viewModel.mondayWebtoonView.indices) { index in
+//                    if index < 9 && index >= 6{
+//                        let webtoonComponent = viewModel.mondayWebtoonView[index]
+//                        webtoonComponentView(webtoonComponent: webtoonComponent)
+//                    }
+//                }
+//            }
+//            HStack{
+//                ForEach(viewModel.mondayWebtoonView.indices) { index in
+//                    if index < 12 && index >= 9{
+//                        let webtoonComponent = viewModel.mondayWebtoonView[index]
+//                        webtoonComponentView(webtoonComponent: webtoonComponent)
+//                    }
+//                }
+//            }
+//
+//
+//        }
+ 
+}
 
 
 struct MKView_Previews: PreviewProvider {
