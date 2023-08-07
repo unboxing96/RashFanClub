@@ -160,3 +160,4 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/swift,macos,windows,xcode
 
 .DS_Store
+*.xcassets
