@@ -13,14 +13,14 @@ struct ContentArea: View {
     
     var body: some View{
         TabView(selection: $selected){
-            MondayView().tag("월")
-            TuesdayView().tag("화")
-            WednesdayView().tag("수")
-            ThursdayView().tag("목")
-            FridayView().tag("금")
-            SaturdayView().tag("토")
-            SundayView().tag("일")
-            NewView().tag("신작")
+            Monday().tag("월")
+            Tuesday().tag("화")
+            Wednesday().tag("수")
+            Thursday().tag("목")
+            Friday().tag("금")
+            Saturday().tag("토")
+            Sunday().tag("일")
+            New().tag("신작")
             
         }
         .tabViewStyle(.page(indexDisplayMode: .never))

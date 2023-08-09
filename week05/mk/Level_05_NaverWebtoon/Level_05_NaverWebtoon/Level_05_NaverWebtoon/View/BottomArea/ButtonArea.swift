@@ -10,15 +10,15 @@ import SwiftUI
 struct ButtonArea: View {
     var body: some View {
         HStack{
-            systemImageLayout(image: .questionmarkCircleFill, color: .fontGreen, fontSize: 20)
-            textLayout(text: "랜덤 작품", color: .fontBlack, fontSize: 16)
+            systemImageLayout(image: .questionmarkCircleFill, color: .FontGreen, fontSize: 20)
+            textLayout(text: "랜덤 작품", color: .FontBlack, fontSize: 16)
                 .fontWeight(.bold)
-            textLayout(text: "보러가기", color: .fontBlack, fontSize: 16)
-            systemImageLayout(image: .chevronRight, color: .fontBlack, fontSize: 14)
+            textLayout(text: "보러가기", color: .FontBlack, fontSize: 16)
+            systemImageLayout(image: .chevronRight, color: .FontBlack, fontSize: 14)
         }
         .frame(maxWidth: .infinity)
         .frame(height: 56)
-        .background(Color.bgWhite100)
+        .background(Color.BgWhite100)
     }
     
     

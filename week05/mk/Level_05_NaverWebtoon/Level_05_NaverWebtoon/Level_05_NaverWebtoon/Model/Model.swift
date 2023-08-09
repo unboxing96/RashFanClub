@@ -7,36 +7,32 @@
 
 import SwiftUI
 
-//모델에 들어가야 할 것들
-//Banner -> ImgBannerTitle, ImgLineBannerTitle, 배너별 인덱스로 opacity 변경, 스크롤 처리
-//Days -> 요일에 따라 
-//Webtoon -> ImgContentMon01-12, author, webtooontitle
-
 struct ImageTitles : Identifiable{
     let id = UUID()
     var imageTitles : String
+    var index : Int
 }
 
 let imageBanners = [
-    ImageTitles(imageTitles: "ImgBanner01"),
-    ImageTitles(imageTitles: "ImgBanner02"),
-    ImageTitles(imageTitles: "ImgBanner03"),
-    ImageTitles(imageTitles: "ImgBanner04"),
-    ImageTitles(imageTitles: "ImgBanner05"),
-    ImageTitles(imageTitles: "ImgBanner06"),
-    ImageTitles(imageTitles: "ImgBanner07"),
-    ImageTitles(imageTitles: "ImgBanner08")
+    ImageTitles(imageTitles: "ImgBanner01", index: 0),
+    ImageTitles(imageTitles: "ImgBanner02", index: 1),
+    ImageTitles(imageTitles: "ImgBanner03", index: 2),
+    ImageTitles(imageTitles: "ImgBanner04", index: 3),
+    ImageTitles(imageTitles: "ImgBanner05", index: 4),
+    ImageTitles(imageTitles: "ImgBanner06", index: 5),
+    ImageTitles(imageTitles: "ImgBanner07", index: 6),
+    ImageTitles(imageTitles: "ImgBanner08", index: 7)
 ]
 
 let imageLineBanners = [
-    ImageTitles(imageTitles: "ImgLineBanner01"),
-    ImageTitles(imageTitles: "ImgLineBanner02"),
-    ImageTitles(imageTitles: "ImgLineBanner03"),
-    ImageTitles(imageTitles: "ImgLineBanner04"),
-    ImageTitles(imageTitles: "ImgLineBanner05"),
-    ImageTitles(imageTitles: "ImgLineBanner06"),
-    ImageTitles(imageTitles: "ImgLineBanner07"),
-    ImageTitles(imageTitles: "ImgLineBanner08")]
+    ImageTitles(imageTitles: "ImgLineBanner01", index: 0),
+    ImageTitles(imageTitles: "ImgLineBanner02", index: 1),
+    ImageTitles(imageTitles: "ImgLineBanner03", index: 2),
+    ImageTitles(imageTitles: "ImgLineBanner04", index: 3),
+    ImageTitles(imageTitles: "ImgLineBanner05", index: 4),
+    ImageTitles(imageTitles: "ImgLineBanner06", index: 5),
+    ImageTitles(imageTitles: "ImgLineBanner07", index: 6),
+    ImageTitles(imageTitles: "ImgLineBanner08", index: 7)]
 
 
 struct WebtoonInfo {

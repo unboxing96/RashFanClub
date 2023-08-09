@@ -11,7 +11,7 @@ import SwiftUI
 struct Level_05_NaverWebtoonApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView(selected: "월")
+            ContentView(selected: "월")
         }
     }
 }

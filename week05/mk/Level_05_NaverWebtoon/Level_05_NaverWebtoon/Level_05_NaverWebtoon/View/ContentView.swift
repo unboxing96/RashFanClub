@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainView: View {
+struct ContentView: View {
     @State var currentIndex: Int = 0
     @State var selected : String
     
@@ -23,11 +23,11 @@ struct MainView: View {
                         ButtonArea()
                         FooterArea()
                     }
-                    .background(Color.bgWhite300)
+                    .background(Color.BgWhite300)
                 }
-                .background(Color.bgWhite100)
+                .background(Color.BgWhite100)
             }
-            .background(Color.bgWhite200)
+            .background(Color.BgWhite200)
             .onAppear{
                     UIScrollView.appearance().bounces = false
                 }
@@ -37,6 +37,6 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(selected: "월")
+        ContentView(selected: "월")
     }
 }
